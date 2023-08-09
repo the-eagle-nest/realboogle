@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>LVMS Newspaper</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+     <div id="popup" class="popup-container">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <h2>This is a test website.</h2>
+      <p>Only some buttons work.</p>
+    </div>
+  </div>
+    <div class="logo-container">
+         <img style="margin:-30px;" src="LVMS.png" class="logo">
+        </div>
+   <div class="container">
+    <h1 style="margin-top: -2px; margin-bottom: -2px;">The Eagle Nest</h1>
+    <div class="buttons">
+      <button onclick="openPage('lunchMenu')">Lunch Menu</button>
+      <button onclick="openPage('liveStream')">Live Stream Sport Events</button>
+      <button onclick="openPage('artCompetition')">Art Competition</button>
+      <button onclick="openPage('vote')">Vote on Things</button>
+      <button onclick="openPage('digitalNewspaper')">Digital Newspaper</button>
+    </div>
+    <p style="color:#b5b5b5; margin: -5px;">Newspaper Homepage V0.43</p>
+  </div>
+    </div>
+  <script src="script.js"></script>
+</body>
+</html>
