@@ -1,12 +1,8 @@
 html, body {
   height: 100%;
    padding: 0;
- background: rgb(5,3,55);
- background: -moz-linear-gradient(43deg, rgba(5,3,55,1) 0%, rgba(14,79,163,1) 49%, rgba(0,255,235,1) 100%);
-background: -webkit-linear-gradient(43deg, rgba(5,3,55,1) 0%, rgba(14,79,163,1) 49%, rgba(0,255,235,1) 100%);
-background: linear-gradient(43deg, rgba(5,3,55,1) 0%, rgba(14,79,163,1) 49%, rgba(0,255,235,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#050337",endColorstr="#00ffeb",GradientType=1);
-}
+  background: conic-gradient(from 45deg at 50% 50%, #67abe6, #25b9ef, #00c6ee, #00d1e3, #00dbcd, #00e2b0, #56e88d, #93ea6a, #cae948, #ffe330);
+ }
 
 body {
   font-family: Arial, sans-serif;
