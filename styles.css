@@ -1,7 +1,7 @@
 html, body {
   height: 100%;
    padding: 0;
-  background: conic-gradient(from 45deg at 50% 50%, #67abe6, #25b9ef, #00c6ee, #00d1e3, #00dbcd, #00e2b0, #56e88d, #93ea6a, #cae948, #ffe330);
+  background: conic-gradient(from 180deg at 50% 50%, #67abe6, #25b9ef, #00c6ee, #00d1e3, #00dbcd, #00e2b0, #56e88d, #93ea6a, #cae948, #ffe330);
  }
 
 body {
