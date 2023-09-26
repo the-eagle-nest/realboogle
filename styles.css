@@ -5,7 +5,7 @@ html, body {
  }
 
  @font-face {
-  font-family: 'FontName';
+  font-family: 'Lovelo';
   src: url('fonts/LoveloBlack.eot'); /* IE9+ Compat Modes */
   src: url('fonts/LoveloBlack.?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('fonts/LoveloBlack.woff2') format('woff2'), /* Super modern browsers */
