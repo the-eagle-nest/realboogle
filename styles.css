@@ -1,11 +1,11 @@
 html, body {
   height: 100%;
    padding: 0;
-  background: conic-gradient(from 180deg at 50% 50%, #67abe6, #25b9ef, #00c6ee, #00d1e3, #00dbcd, #00e2b0, #56e88d, #93ea6a, #cae948, #ffe330);
+background:%20conic-gradient(from%20180deg%20at%2050%25%2050%25,%20%230018f2,%20%230242f3,%20%2308abf5,%20%2310f7b9,%20%2318fa2f,%20%238afc21,%20%23e9fe27,%20%23fff129);
  }
 
  @font-face {
-  font-family: 'FontName';
+  font-family: 'Lovelo';
   src: url('fonts/LoveloBlack.eot'); /* IE9+ Compat Modes */
   src: url('fonts/LoveloBlack.?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('fonts/LoveloBlack.woff2') format('woff2'), /* Super modern browsers */
@@ -103,6 +103,7 @@ img {
 button {
   margin: 8px;
   padding: 8px 16px;
+  font-family: 'Lovelo';
   font-size: 14px;
   background-color: #007bff;
   color: #ffffff;
@@ -115,6 +116,10 @@ button {
 
 button:hover {
   background-color: #0056b3;
+}
+
+p {
+  text-size:11px;
 }
 
 /* Popup Styles */
