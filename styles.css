@@ -1,8 +1,8 @@
 html, body {
   height: 100%;
    padding: 0;
-background:%20conic-gradient(from%20180deg%20at%2050%25%2050%25,%20%230018f2,%20%230242f3,%20%2308abf5,%20%2310f7b9,%20%2318fa2f,%20%238afc21,%20%23e9fe27,%20%23fff129);
- }
+   background: conic-gradient(from 180deg at 50% 50%, #0018f2, #012af2, #0359f3, #079ff4, #0cf4f6, #11f8a0, #17f948, #43fb1c, #94fd21, #d4fe25, #feff28, #fff129);
+  }
 
  @font-face {
   font-family: 'Lovelo';
