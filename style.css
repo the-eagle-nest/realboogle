@@ -12,6 +12,8 @@ body {
   border-radius: 15px;
   padding: 25px;
   width: 90%;
+  border-color: white;
+  border-width: 1px;
   max-width: 1000px;
   display: flex;
   flex-direction: row;
@@ -75,9 +77,6 @@ body {
 
 body {
   margin: 0;
-  background: url("") no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .navbar{
