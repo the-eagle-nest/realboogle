@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  color: #fafafa;
+  color: #ffffff;
   background: linear-gradient(98.18deg, rgba(240, 240, 240, 0.18) 20.56%, rgba(8, 8, 8, 0.18) 67.99%);
   backdrop-filter: blur(17.4px);
 }
@@ -53,6 +53,7 @@ body {
 }
 
 .logo {
+  padding-right: 15px;
   width: 150px;
 }
 
