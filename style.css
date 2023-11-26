@@ -2,32 +2,23 @@
   width: 300px;
   height: 200px;
   margin: 0 auto;
-  background-color: #aaaaaa;
+  background-color: #fff;
   border-radius: 10px;
   display: flex;
-  /* Change flex direction to row */
   flex-direction: row;
-  align-items: center;
-}
-.card-content {
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-}
-
-.card-left {
-  display: flex;
   align-items: center;
 }
 
 .card-right {
-  display: flex;
-  /* Change flex direction to column */
-  flex-direction: column;
-  justify-content: center;
+  position: relative;
+  width: 50%; /* Set width to 50% to occupy half of the card */
 }
 
 .button {
+  position: absolute; /* Position buttons absolutely within the card-right */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center buttons using transform */
   border: none;
   background-color: transparent;
   cursor: pointer;
