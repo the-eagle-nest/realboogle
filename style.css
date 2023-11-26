@@ -16,8 +16,8 @@ body {
   flex-direction: row;
   align-items: flex-start;
   color: #fafafa;
-  background:linear-gradient(156deg,rgb(27 65 103 / 90%) 0%,rgba(14,15,15,0.9) 100%);
-  box-shadow: 0 10px 15px rgba(0,0,0,0.3), inset 0 2px 1px rgb(157 157 157 / 30%), inset 0 -2px 1px rgba(0,0,0,0.4);
+  background: linear-gradient(98.18deg, rgba(240, 240, 240, 0.18) 20.56%, rgba(8, 8, 8, 0.18) 67.99%);
+  backdrop-filter: blur(17.4px);
 }
 
 .card-content {
@@ -284,10 +284,7 @@ box-shadow: 0px 0px 41px 10px rgba(255, 255, 255, 0.8);
   align-items: flex-start;
   gap: 5px;
   color: #fafafa;
-background: linear-gradient(98.18deg, rgba(240, 240, 240, 0.18) 20.56%, rgba(8, 8, 8, 0.18) 67.99%);
-backdrop-filter: blur(17.4px);
-/* Note: backdrop-filter has minimal browser support */
-border-radius: 16px;
+  background: linear-gradient(90deg, #c2c2c2 0%, #474747 100%); 
 }
 .tile.horiz {
   display: flex;
