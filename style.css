@@ -119,7 +119,12 @@ box-shadow: inset 0px 2px 2px 0.4px rgba(255, 255, 255, 0.25), inset 2px 0px 2px
   align-items: center;
   padding: 25px;
   gap: 25px;
+  background-image: url('bg.webp');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
 }
+
 .content {
   display: flex;
   flex-direction: column;
