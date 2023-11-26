@@ -1,18 +1,35 @@
 .card {
   width: 300px;
-  height: 400px;
+  height: 200px;
   margin: 0 auto;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
 }
 
-.card-header {
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+.card-content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
 }
 
-.card-body {
-  padding: 20px;
+.card-left {
+  display: flex;
+  align-items: center;
+}
+
+.card-right {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+img {
+  width: 50px;
 }
