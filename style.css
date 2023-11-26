@@ -46,12 +46,12 @@ img {
 
 @font-face {
   font-family: "Regular";
-  src: url("fonts/Light.ttf");
+  src: url("fonts/Frutiger.ttf");
 } 
 
 @font-face {
   font-family: "ExtraLight";
-  src: url("fonts/Thin.ttf");
+  src: url("fonts/Frutiger.ttf");
 }
 
 body {
