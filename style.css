@@ -19,6 +19,7 @@ body {
   background:linear-gradient(156deg,rgb(27 65 103 / 90%) 0%,rgba(14,15,15,0.9) 100%);
   box-shadow: 0 10px 15px rgba(0,0,0,0.3), inset 0 2px 1px rgb(157 157 157 / 30%), inset 0 -2px 1px rgba(0,0,0,0.4);
 }
+
 .card-content {
   flex: 1;
   display: flex;
@@ -78,9 +79,8 @@ body {
   align-items: center;
   padding: 10px 25px;
   gap: 15px;
-background: linear-gradient(180deg, #939393 0%, #49494B 52.19%, #2D2D2D 53.26%, #060606 100%);
-box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.4), inset 0px 2px 0px rgba(255, 255, 255, 0.3);
-
+background: linear-gradient(180deg, #3767E1 -10.71%, #0C41BF 50.64%, #001898 50.92%, #020053 100%);
+box-shadow: inset 0px 2px 2px 0.4px rgba(255, 255, 255, 0.25), inset 2px 0px 2px 0.2px rgba(0, 0, 0, 0.25);
 }
 
 .nav.desktop{
@@ -113,7 +113,14 @@ box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.4), inset 0px 2px 0px rgba(255, 2
   background: none;
 }
 
-.content {
+.content1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  gap: 25px;
+}
+.content1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -264,7 +271,7 @@ box-shadow: 0px 0px 41px 10px rgba(255, 255, 255, 0.8);
   display: grid;
   width: 100%;
   grid-template-columns: 33% 33% auto;
-  gap: 25px;
+  gap: 40px;
 }
 
 .tile {
