@@ -64,6 +64,9 @@ body {
   .card-content {
     display: block; /* Remove flexbox display for smaller screens */
   }
+  .card-right {
+    margin: 0 auto; /* Center buttons horizontally and vertically */
+  }
 }
 
 .logo {
