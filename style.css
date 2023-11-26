@@ -2,17 +2,42 @@
   width: 300px;
   height: 200px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #646464;
   border-radius: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+.card-content {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-left {
+  display: flex;
+  align-items: center;
+}
 
 .card-right {
+  display: flex;
+  /* Change flex direction to column */
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   width: 50%; /* Set width to 50% to occupy half of the card */
 }
+
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+img {
+  width: 50px;
+}
+
 
 .button {
   position: absolute; /* Position buttons absolutely within the card-right */
@@ -27,3 +52,4 @@
 img {
   width: 50px;
 }
+
