@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Frutiger";
+  src: url("fonts/Frutiger.ttf");
+} 
+
 body {
   font-family: Frutiger, sans-serif;
 }
@@ -6,7 +11,6 @@ body {
   border-radius: 15px;
   padding: 25px;
   width: 100%;
-  border-radius: 10px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -23,6 +27,7 @@ body {
 .card-left {
   display: flex;
   align-items: center;
+  font-size: larger;
 }
 
 .card-right {
@@ -41,16 +46,16 @@ body {
 }
 
 .button img {
-  width: 12em; /* Set desired width for SVG image */
+  width: 14em; /* Set desired width for SVG image */
 
 }
 
 .logo {
-  width: 50px;
+  width: 150px;
 }
 
 @font-face {
-  font-family: "Regular, bold";
+  font-family: "Regular";
   src: url("fonts/Frutiger.ttf");
 } 
 
