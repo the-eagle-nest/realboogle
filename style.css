@@ -32,16 +32,15 @@ body {
 }
 
 .button {
-  width: 75px;
-  height: 75px;
   background-color: transparent; /* Set background color to blue */
   cursor: pointer;
   margin-bottom: 10px;
+  border: none;
 }
 
 .button img {
-  width: 25px; /* Set desired width for SVG image */
-  height: 25px; /* Set desired height for SVG image */
+  width: 6em; /* Set desired width for SVG image */
+
 }
 
 .logo {
