@@ -248,13 +248,13 @@ box-shadow: inset 0px 2px 2px 0.4px rgba(255, 255, 255, 0.25), inset 2px 0px 2px
   width: 60px;
   transition: all 300ms ease;
   background: url("orb.svg") no-repeat;
-  background-size: 46px;
+  background-size: 48px;
 }
 
 .orb:hover{
   transition: all 300ms ease;
   background: url("orb.svg") no-repeat;
-  background-size: 48px;
+  background-size: 49px;
 }
 
 #disabled {
