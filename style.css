@@ -19,7 +19,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  color: #ffffff;
+  color: #000000;
   background: linear-gradient(98.18deg, rgba(240, 240, 240, 0.18) 20.56%, rgba(8, 8, 8, 0.18) 67.99%);
   backdrop-filter: blur(17.4px);
 }
@@ -56,7 +56,7 @@ body {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .card {
     flex-direction: column; 
   }
