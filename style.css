@@ -58,8 +58,30 @@ body {
 
 @media (max-width: 750px) {
   .card {
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  .card-header {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .card-left {
+    margin-bottom: 20px;
+  }
+
+  .card-right {
+    display: flex;
+    justify-content: center;
+  }
+
+  .button {
+    margin: 10px;
+  }
+}
 
 }
 .logo {
