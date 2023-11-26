@@ -23,6 +23,7 @@ body {
   background: linear-gradient(98.18deg, rgba(240, 240, 240, 0.18) 20.56%, rgba(8, 8, 8, 0.18) 67.99%);
   backdrop-filter: blur(17.4px);
   -webkit-backdrop-filter: blur(17.4px);
+  border: 1px solid #ffffff;
 }
 
 .card-content {
@@ -58,7 +59,6 @@ body {
 
 .button img {
   width: 14em; 
-
 }
 
 .footer {
@@ -66,7 +66,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #ccc;
+  background-color: transparent;
   padding: 20px;
   text-align: center;
 }
@@ -77,8 +77,8 @@ body {
 
 .footer-link {
   text-decoration: none;
-  color: #007bff;
-  border-bottom: 2px solid #007bff;
+  color: #000000;
+  border-bottom: 2px solid #000000;
   padding-bottom: 5px;
 }
 
