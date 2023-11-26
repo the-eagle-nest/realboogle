@@ -10,7 +10,8 @@ body {
 .card {
   border-radius: 15px;
   padding: 25px;
-  width: 100%;
+  width: 90%;
+  max-width: 1000px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -27,7 +28,7 @@ body {
 .card-left {
   display: flex;
   align-items: center;
-  font-size: larger;
+  font-size: 58px;
 }
 
 .card-right {
@@ -429,7 +430,7 @@ h1 {
 h2 {
   margin: 0 0 5px;
   font-weight: normal;
-  font-family: "ExtraLight";
+  font-family: "Frutiger, Bold";
   font-style: normal;
   font-size: 32px;
   line-height: 125%;
