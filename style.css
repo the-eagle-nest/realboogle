@@ -3,9 +3,12 @@
   src: url("fonts/Frutiger.ttf");
 } 
 
+html {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 79.14%, #77B0F3 100%);
+}
+
 body {
   font-family: Frutiger, sans-serif;
-  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 79.14%, #77B0F3 100%);
 }
 
 .card {
