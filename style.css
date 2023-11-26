@@ -21,10 +21,9 @@
 
 .card-right {
   display: flex;
-  /* Change flex direction to column */
   flex-direction: column;
   justify-content: center;
-  position: relative;
+  align-items: center; /* Center buttons horizontally within card-right */
   width: 50%; /* Set width to 50% to occupy half of the card */
 }
 
@@ -32,23 +31,11 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-}
-
-img {
-  width: 50px;
-}
-
-
-.button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Center buttons horizontally within card-right */
-  width: 50%; /* Set width to 50% to occupy half of the card */
   margin-bottom: 10px; /* Add margin between buttons */
 }
 
+
+
 img {
   width: 50px;
 }
-
