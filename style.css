@@ -41,7 +41,6 @@ img {
 
 .button {
   position: absolute; /* Position buttons absolutely within the card-right */
-  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* Center buttons using transform */
   border: none;
