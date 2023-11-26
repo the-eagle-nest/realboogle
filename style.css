@@ -15,8 +15,6 @@ body {
   border-radius: 15px;
   padding: 25px;
   width: 90%;
-  border-color: white;
-  border-width: 1px;
   max-width: 1000px;
   display: flex;
   flex-direction: row;
@@ -43,21 +41,27 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Center buttons horizontally within card-right */
-  width: 50%; /* Set width to 50% to occupy half of the card */
+  align-items: center; 
+  width: 50%; 
 }
 
 .button {
-  background-color: transparent; /* Set background color to blue */
+  background-color: transparent; 
   cursor: pointer;
   border: none;
 }
 
 .button img {
-  width: 14em; /* Set desired width for SVG image */
+  width: 14em; 
 
 }
 
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column; 
+  }
+
+}
 .logo {
   padding-right: 15px;
   width: 150px;
