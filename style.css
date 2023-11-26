@@ -32,14 +32,13 @@ body {
 }
 
 .button {
+  width: 75px;
+  height: 75px;
   border: none;
   background-color: transparent;
   cursor: pointer;
-  margin-bottom: 10px; /* Add margin between buttons */
-  width: 50px;
+  margin-bottom: 10px;
 }
-
-
 
 .logo {
   width: 50px;
