@@ -284,7 +284,7 @@ box-shadow: 0px 0px 41px 10px rgba(255, 255, 255, 0.8);
   align-items: flex-start;
   gap: 5px;
   color: #fafafa;
-  background: linear-gradient(90deg, #c2c2c2 0%, #474747 100%); 
+  background: linear-gradient(180deg, #c2c2c2 0%, #474747 100%); 
 }
 .tile.horiz {
   display: flex;
@@ -437,7 +437,7 @@ h2 {
   font-weight: normal;
   font-family: "Frutiger";
   font-style: bold;
-  font-size: 32px;
+  font-size: 68px;
   line-height: 125%;
   text-transform: lowercase;
 
