@@ -50,7 +50,6 @@ body {
 .button {
   background-color: transparent; /* Set background color to blue */
   cursor: pointer;
-  margin-bottom: 10px;
   border: none;
 }
 
