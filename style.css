@@ -2,12 +2,13 @@
   width: 300px;
   height: 200px;
   margin: 0 auto;
-  background-color: #000000;
+  background-color: #fff;
   border-radius: 10px;
   display: flex;
   /* Change flex direction to row */
   flex-direction: row;
   align-items: center;
+  box-shadow: 10px;
 }
 .card-content {
   flex: 1;
@@ -22,7 +23,9 @@
 
 .card-right {
   display: flex;
-  justify-content: space-around;
+  /* Change flex direction to column */
+  flex-direction: column;
+  justify-content: center;
 }
 
 .button {
