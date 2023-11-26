@@ -40,12 +40,11 @@ img {
 
 
 .button {
-  position: absolute; /* Position buttons absolutely within the card-right */
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center buttons using transform */
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center buttons horizontally within card-right */
+  width: 50%; /* Set width to 50% to occupy half of the card */
   margin-bottom: 10px; /* Add margin between buttons */
 }
 
