@@ -5,7 +5,7 @@ body {
 .card {
   width: 300px;
   height: 200px;
-  margin: 0 auto;
+  margin: 4em;
   background-color: #646464;
   border-radius: 10px;
   display: flex;
@@ -39,7 +39,7 @@ body {
 }
 
 .button img {
-  width: 6em; /* Set desired width for SVG image */
+  width: 12em; /* Set desired width for SVG image */
 
 }
 
