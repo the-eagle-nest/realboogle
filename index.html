@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card with Logo, Name, and Buttons</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fonts/Frutiger.ttf">
-
+    <title>The Eagle Nest</title>
+    <link rel="stylesheet" href="style.css" defer>
 </head>
-<body>
+<body style="display: none;">
     <div class="navbar">
         <div class="nav mobile">  
           <label id="menu_toggle_label" for="menu_toggle"> <div class="navlink"><i class="material-icons" style="font-size:32px;">menu</i></div></label>
@@ -56,5 +54,10 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          document.body.style.display = 'block';
+        });
+      </script>
 </body>
 </html>
