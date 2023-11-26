@@ -61,6 +61,27 @@ body {
 
 }
 
+.footer {
+  position: fixed; /* Fix footer to the bottom of the page */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+}
+
 @media (max-width: 750px) {
   .card-content {
     display: block; /* Remove flexbox display for smaller screens */
