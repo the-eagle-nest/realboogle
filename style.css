@@ -34,8 +34,7 @@ body {
 .button {
   width: 75px;
   height: 75px;
-  border: none;
-  background-color: transparent;
+  background-color: #007bff; /* Set background color to blue */
   cursor: pointer;
   margin-bottom: 10px;
 }
@@ -96,7 +95,6 @@ box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.4), inset 0px 2px 0px rgba(255, 2
   text-decoration: none;
 }
 
-
 .navbar img{
   height: 36px;
   box-shadow: none;
@@ -134,7 +132,6 @@ box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.4), inset 0px 2px 0px rgba(255, 2
   padding: 50px;
   gap: 25px;
 }
-
 
 .vl {
   width: 1px;
@@ -179,7 +176,6 @@ box-shadow: inset 0px -2px 1px rgba(0, 0, 0, 0.4), inset 0px 2px 0px rgba(255, 2
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3), inset 0px 2px 1px rgba(255, 255, 255, 0.3), inset 0px -2px 1px rgba(0, 0, 0, 0.4);
   border-radius: 25px 25px 0px 0px;
 }
-
 
 .standalone_img{
   box-shadow: none;
