@@ -67,10 +67,9 @@
   }
   
   #content {
-    flex-grow: 1; /* Allow content to expand to fill the available space */
+    flex-grow: 1;
   }
   
-  /* Position the footer relative to the body */
   .footer {
     position: relative;
     bottom: 0;
