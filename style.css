@@ -1,4 +1,4 @@
-/* CSSTidy 1.5.2: Sun, 26 Nov 2023 21:45:22 */
+/* CSSTidy 1.5.2: Mon, 27 Nov 2023 21:59:24 */
 @font-face {
   font-family:"Frutiger";
   src:url(fonts/Frutiger.ttf)
@@ -26,8 +26,6 @@
   -webkit-backdrop-filter:blur(17.4px);
   border:1px solid white
   }
-
-
   
   .card-content {
   flex:1;
@@ -69,66 +67,65 @@
   }
   
   #content {
-    flex-grow: 1;
-  }
-
-  .card-read {
-    display: flex;
-    flex-direction: row;
-    width:90%;
-  max-width:1000px;
-    margin: 0 auto;
-    padding: 20px;
-    color:#000000;
-    background:linear-gradient(180deg,rgba(240,240,240,0.18) 20.56%,rgba(8,8,8,0.18) 67.99%);
-    backdrop-filter:blur(17.4px);
-    -webkit-backdrop-filter:blur(17.4px);
-    border:1px solid white;
-    border-radius:15px;
-  }
-
-  .card-read-desc {
-    display: flex;
-    flex-direction: column;
-    width:70%;
-  max-width:1000px;
-    margin: 0 auto;
-    margin-right: -10px;
-    padding: 20px;
-    color:#000000;
-    background:linear-gradient(180deg,rgba(240,240,240,0.18) 20.56%,rgba(8,8,8,0.18) 67.99%);
-    backdrop-filter:blur(17.4px);
-    -webkit-backdrop-filter:blur(17.4px);
-    border:1px solid white;
-    border-radius:15px;
+  flex-grow:1
   }
   
+  .card-read {
+  display:flex;
+  flex-direction:row;
+  width:90%;
+  max-width:1000px;
+  margin:0 auto;
+  padding:20px;
+  color:#000000;
+  background:linear-gradient(180deg,rgba(240,240,240,0.18) 20.56%,rgba(8,8,8,0.18) 67.99%);
+  backdrop-filter:blur(17.4px);
+  -webkit-backdrop-filter:blur(17.4px);
+  border:1px solid white;
+  border-radius:15px
+  }
+  
+  .card-read-desc {
+  display:flex;
+  flex-direction:column;
+  width:70%;
+  max-width:1000px;
+  margin:0 auto;
+  margin-right:-10px;
+  padding:20px;
+  color:#000000;
+  background:linear-gradient(180deg,rgba(240,240,240,0.18) 20.56%,rgba(8,8,8,0.18) 67.99%);
+  backdrop-filter:blur(17.4px);
+  -webkit-backdrop-filter:blur(17.4px);
+  border:1px solid white;
+  border-radius:15px
+  }
   
   .text-section {
-    flex-grow: 5;
-    padding: 0 20px;
+  flex-grow:5;
+  padding:0 20px
   }
   
   .image-section {
-    flex-grow: 1;
-    text-align: center;
-    padding: 0 20px;
+  flex-grow:1;
+  text-align:center;
+  padding:0 20px
   }
   
   .description-card {
-    background-color: #eee;
-    padding: 10px;
-    border: 1px solid #ccc;
+  background-color:#eee;
+  padding:10px;
+  border:1px solid #ccc
   }
   
   .footer {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent;
-    padding: 10px;
-    text-align: center;
+  position:relative;
+  bottom:0;
+  left:0;
+  width:100%;
+  background-color:transparent;
+  padding:10px;
+  text-align:center
   }
   
   .footer-content {
@@ -140,8 +137,7 @@
   font-size:25px;
   text-decoration:underline;
   color:#000000;
-  padding-bottom:5px;
-  padding: 15px;
+  padding:15px
   }
   
   @media (max-width: 750px) {
@@ -152,17 +148,14 @@
   .card-right {
   margin:0 auto
   }
-  .footer {
-    position: fixed;
-  }
+  
   .footer-link {
-    font-family:"Frutiger";
-    font-size:18px;
-    text-decoration:underline;
-    color:#000000;
-    padding-bottom:5px;
-    padding: 5px;
-    }
+  font-family:"Frutiger";
+  font-size:20px;
+  text-decoration:underline;
+  color:#000000;
+  padding:5px
+  }
   }
   
   .logo {
