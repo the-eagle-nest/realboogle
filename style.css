@@ -36,7 +36,7 @@
     flex-direction:row;
     align-items:flex-start;
     color:#000000;
-    background:linear-gradient(0deg,rgba(240,240,240,0.18) 20.56%,rgba(8,8,8,0.18) 67.99%);
+    background:linear-gradient(180deg,rgba(240,240,240,0.18) 20.56%,rgba(8,8,8,0.18) 67.99%);
     backdrop-filter:blur(17.4px);
     -webkit-backdrop-filter:blur(17.4px);
     border:1px solid white
@@ -86,12 +86,8 @@
   }
 
   .text-section {
-    flex-grow: 3;
+    flex-grow: 6;
     padding: 0 20px;
-  }
-  
-  .image-section {
-    flex-grow: 1;
     text-align: center;
     padding: 0 20px;
   }
