@@ -88,7 +88,7 @@
   .card-read-desc {
   display:flex;
   flex-direction:column;
-  width:70%;
+  width:80%;
   max-width:1000px;
   margin:0 auto;
   margin-right:-10px;
@@ -103,11 +103,12 @@
   
   .text-section {
   flex-grow:5;
-  padding:0 20px
+  padding:0 20px;
+  text-align: center;
   }
   
   .image-section {
-  flex-grow:1;
+  flex-grow:2;
   text-align:center;
   padding:0 20px
   }
