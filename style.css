@@ -66,27 +66,19 @@
   flex-grow:1
   }
   
-  .footer {
-    position: absolute; 
-    bottom: 0;
-    left: 0; 
-    width: 100%; 
-    background-color: transparent; 
-    padding: 15px; 
-    text-align: center; 
+  #content {
+    flex-grow: 1; /* Allow content to expand to fill the available space */
   }
-   .footer {
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  background-color:transparent;
-  padding:30px;
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  height:auto;
-  flex-grow:1
+  
+  /* Position the footer relative to the body */
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ccc;
+    padding: 20px;
+    text-align: center;
   }
   
   .footer-content {
@@ -112,7 +104,6 @@
   }
   .footer {
     position: fixed;
-    bottom: 0;
   }
   .footer-link {
     font-family:"Frutiger";
