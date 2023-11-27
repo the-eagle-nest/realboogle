@@ -60,23 +60,20 @@
   }
   
   body {
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  flex-grow:1
-  }
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
   
+  }
   .footer {
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  background-color:transparent;
-  padding:30px;
-  text-align:center;
-  display:flex;
-  flex-direction:column;
-  height:auto
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    background-color: transparent; 
+    padding: 20px; 
+    text-align: center; 
   }
   
   .footer-content {
@@ -100,8 +97,9 @@
   .card-right {
   margin:0 auto
   }
-    .footer {
-    position: fixed; /* Fix footer to bottom on mobile */
+  .footer {
+    position: absolute;
+    bottom: 0;
   }
   }
   
