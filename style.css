@@ -88,7 +88,8 @@
   font-size:28px;
   text-decoration:underline;
   color:#000000;
-  padding-bottom:5px
+  padding-bottom:5px;
+  padding: 15px;
   }
   
   @media (max-width: 750px) {
