@@ -93,6 +93,7 @@
     width:70%;
   max-width:1000px;
     margin: 0 auto;
+    margin-right: -10px;
     padding: 20px;
     color:#000000;
     background:linear-gradient(180deg,rgba(240,240,240,0.18) 20.56%,rgba(8,8,8,0.18) 67.99%);
