@@ -24,7 +24,7 @@
   background:linear-gradient(98.18deg,rgba(240,240,240,0.18) 20.56%,rgba(8,8,8,0.18) 67.99%);
   backdrop-filter:blur(17.4px);
   -webkit-backdrop-filter:blur(17.4px);
-  border:1px solid linear-gradient(315deg,#000000 0%,#ffffff 100%)
+  border:1px solid white
   }
   
   .card-content {
@@ -86,7 +86,7 @@
   
   .footer-link {
   font-family:"Frutiger";
-  font-size:28px;
+  font-size:25px;
   text-decoration:underline;
   color:#000000;
   padding-bottom:5px;
@@ -102,7 +102,7 @@
   margin:0 auto
   }
   .footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
   }
   .footer-link {
@@ -111,7 +111,7 @@
     text-decoration:underline;
     color:#000000;
     padding-bottom:5px;
-    padding: 15px;
+    padding: 5px;
     }
   }
   
