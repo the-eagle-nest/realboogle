@@ -69,6 +69,23 @@
   #content {
     flex-grow: 1;
   }
+
+  .text-section {
+    flex-grow: 3;
+    padding: 0 20px;
+  }
+  
+  .image-section {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .description-card {
+    background-color: #eee;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
   
   .footer {
     position: relative;
