@@ -91,10 +91,9 @@
   width:70%;
   max-width:200px;
   margin:0 auto;
-  margin-right:-10px;
   padding:20px;
   color:#000000;
-    background: linear-gradient(180deg,rgba(189, 189, 189, 0.18) 20.56%,rgba(8,8,8,0.18) 67.99%);
+    background: linear-gradient(180deg,rgba(240, 240, 240, 0.77) 20.56%,rgba(8,8,8,0.18) 67.99%);
   backdrop-filter:blur(17.4px);
   -webkit-backdrop-filter:blur(17.4px);
   border:1px solid white;
@@ -113,14 +112,13 @@
   padding:0 20px;
   display:flex;
   flex-direction:column;
-  justify-content:center;
   align-items:center;
   }
-
   
-
-  
-  
+  .image-section desc-img {
+      width: 250px;
+    }
+    
   .description-card {
   background-color:#eee;
   padding:10px;
