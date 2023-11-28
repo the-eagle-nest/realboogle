@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Values to be customized
+  
   var articleTitle = "Replace this with the article title";
   var articleContent = "Replace this with your article";
   var articleWriter = "Replace this with the writer's name";
   var articleDescription = "Replace this with a short description of the article";
+  var articlePictureUrl = "Replace this with the link of the article picture. Must be 300x300 and a .webp file";
 
 // DO NOT EDIT BELOW HERE.  IT WILL BREAK THE WEBSITE.
 
@@ -13,7 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var articleWriterElement = document.getElementById('article-writer');
   articleWriterElement.innerText = "Written by: " + articleWriter;
   var articleDescriptionElement = document.getElementById('article-description');
-    articleDescriptionElement.innerText = articleDescription;
+  articleDescriptionElement.innerText = articleDescription;
+  var articlePictureElement = document.getElementById('article-picture');
+  articlePictureElement.src = articlePictureUrl;
 });
 
 function openPage(pageName) {
