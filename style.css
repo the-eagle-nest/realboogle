@@ -88,13 +88,13 @@
   .card-read-desc {
   display:flex;
   flex-direction:column;
-  width:80%;
-  max-width:1000px;
+  width:70%;
+  max-width:200px;
   margin:0 auto;
   margin-right:-10px;
   padding:20px;
   color:#000000;
-  background:linear-gradient(180deg,rgba(240,240,240,0.18) 20.56%,rgba(8,8,8,0.18) 67.99%);
+    background: linear-gradient(180deg,rgba(189, 189, 189, 0.18) 20.56%,rgba(8,8,8,0.18) 67.99%);
   backdrop-filter:blur(17.4px);
   -webkit-backdrop-filter:blur(17.4px);
   border:1px solid white;
@@ -102,16 +102,24 @@
   }
   
   .text-section {
-  flex-grow:5;
+  flex-grow:4;
   padding:0 20px;
   text-align: center;
   }
   
   .image-section {
-  flex-grow:2;
+  flex-grow:1;
   text-align:center;
-  padding:0 20px
+  padding:0 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
   }
+
+  
+
+  
   
   .description-card {
   background-color:#eee;
