@@ -99,7 +99,6 @@
   .card-read-desc {
   display:flex;
   flex-direction:column;
-  width:70%;
   max-width:200px;
   margin:0 auto;
   padding:20px;
