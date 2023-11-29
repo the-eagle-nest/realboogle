@@ -185,23 +185,23 @@
   text-decoration:underline;
   color:#000000;
   padding:5px;
-
+  }
   .card-read-desc {
     max-width:400px;
   }
 
   .text-section {
-     order: 2;
-    }
+   order: 2;
+   }
       
-    .image-section {
-    order: 1;
-    }
-    .card-read {
-      flex-direction:column;
-      }
+  .image-section {
+   order: 1;
+   }
+  .card-read {
+  flex-direction:column;
+   }
       
-  }                     
+                  
   }
   
   .logo {
