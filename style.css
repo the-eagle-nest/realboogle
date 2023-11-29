@@ -58,15 +58,27 @@
   .button img {
   width:16em
   }
-  
-  .button-2 {
+  .button-3 {
     background-color:transparent;
     cursor:pointer;
     border:none;
     margin:10px
     }
     
-    .button-2 img {
+    .button-3 img {
+      height: 4.5em;
+      margin-left: -28px;
+      margin-bottom: -15px;
+    } 
+
+  .button-4 {
+    background-color:transparent;
+    cursor:pointer;
+    border:none;
+    margin:10px
+    }
+    
+    .button-4 img {
     width:13em
     } 
 
@@ -103,7 +115,7 @@
   margin:0 auto;
   padding:20px;
   color:#000000;
-    background: linear-gradient(180deg,rgba(240, 240, 240, 0.77) 20.56%,rgba(8,8,8,0.18) 67.99%);
+    background: linear-gradient(180deg,rgba(176, 176, 176, 0.18) 0%,rgba(58, 58, 58, 0.18) 100%);
   backdrop-filter:blur(17.4px);
   -webkit-backdrop-filter:blur(17.4px);
   border:1px solid white;
@@ -172,8 +184,24 @@
   font-size:20px;
   text-decoration:underline;
   color:#000000;
-  padding:5px
+  padding:5px;
+
+  .card-read-desc {
+    max-width:400px;
   }
+
+  .text-section {
+     order: 2;
+    }
+      
+    .image-section {
+    order: 1;
+    }
+    .card-read {
+      flex-direction:column;
+      }
+      
+  }                     
   }
   
   .logo {
