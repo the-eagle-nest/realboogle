@@ -170,7 +170,7 @@
   padding:15px
   }
   
-  @media (max-width: 750px) {
+  @media (max-width: 800px) {
   .card-content {
   display:block
   }
@@ -201,7 +201,10 @@
   .card-read {
   flex-direction:column;
    }
-      
+   .button-3 img {
+    margin-left: -4px;
+  } 
+
                   
   }
   
