@@ -113,7 +113,7 @@
   flex-direction:column;
   max-width:200px;
   margin:0 auto;
-  margin: -40px auto auto 5px;
+  margin: -30px auto auto 5px;
   padding:20px;
   color:#000000;
     background: linear-gradient(180deg,rgba(176, 176, 176, 0.18) 0%,rgba(58, 58, 58, 0.18) 100%);
@@ -189,7 +189,7 @@
   }
   .card-read-desc {
     max-width:400px;
-    margin: -45px 5px 5px 5px;
+    margin: -25px 5px 5px 5px;
   }
 
   .text-section {
