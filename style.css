@@ -210,7 +210,7 @@
   margin-left:-4px
   }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
    
     .footer-link {
     font-family:"Frutiger";
@@ -220,7 +220,8 @@
     padding:5px
     }
     .logo {
-      width:100px;
+      padding-right: 0px;
+      width: 120px
     }
 
     }
