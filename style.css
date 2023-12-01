@@ -183,7 +183,8 @@
   }
   
   .card-right {
-  margin:0 auto
+  margin:0 auto;
+  margin-top: 15px;
   }
   
   .footer-link {
