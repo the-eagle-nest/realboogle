@@ -672,7 +672,7 @@
       line-height:115%;
     }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 400px) {
     h2{
       font-size: 46px;
       line-height:110%;
