@@ -210,7 +210,21 @@
   margin-left:-4px
   }
   }
-  
+  @media (max-width: 600px) {
+   
+    .footer-link {
+    font-family:"Frutiger";
+    font-size:15px;
+    text-decoration:underline;
+    color:#000000;
+    padding:5px
+    }
+    .logo {
+      width:100px;
+    }
+
+    }
+    
   .logo {
   padding-right:15px;
   width:150px
@@ -652,5 +666,11 @@
     h2{
       font-size: 54px;
       line-height:115%;
+    }
+  }
+  @media (max-width: 600px) {
+    h2{
+      font-size: 46px;
+      line-height:110%;
     }
   }
