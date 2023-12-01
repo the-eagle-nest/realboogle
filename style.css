@@ -171,6 +171,11 @@
   color:#000000;
   padding:15px
   }
+
+  .logo {
+    padding-right:15px;
+    width:150px
+    }  
   
   @media (max-width: 800px) {
   .card-content {
@@ -223,14 +228,8 @@
       padding-right: 0px;
       width: 120px
     }
-
     }
     
-  .logo {
-  padding-right:15px;
-  width:150px
-  }
-  
   .new-span {
   font-family:"Frutiger"
   }
