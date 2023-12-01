@@ -209,9 +209,6 @@
   .button-3 img {
   margin-left:-4px
   }
-  h2{
-    font-size: 54px;
-  }
   }
   
   .logo {
@@ -650,4 +647,9 @@
   color:#E6E6E6;
   font-family:Regular;
   margin:5px 0 0
+  }
+  @media (max-width: 800px) {
+    h2{
+      font-size: 54px;
+    }
   }
