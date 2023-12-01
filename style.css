@@ -666,7 +666,7 @@
   font-family:Regular;
   margin:5px 0 0
   }
-  @media (max-width: 550px) {
+  @media (max-width: 560px) {
     h2{
       font-size: 54px;
       line-height:115%;
