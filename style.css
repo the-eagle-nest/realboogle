@@ -175,7 +175,7 @@
   .logo {
     padding-right:15px;
     width:150px
-    }  
+  }  
   
   @media (max-width: 800px) {
   .card-content {
@@ -227,6 +227,9 @@
     .logo {
       padding-right: 0px;
       width: 120px
+    }
+    .button img {
+      width:14em
     }
     }
     
