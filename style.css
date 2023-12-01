@@ -118,7 +118,7 @@
   color:#000000;
     background: linear-gradient(180deg,rgba(176, 176, 176, 0.18) 0%,rgba(58, 58, 58, 0.18) 100%);
   backdrop-filter:blur(20px);
-  -webkit-backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(17px);
   border:1px solid white;
   border-radius:15px
   }
@@ -522,7 +522,7 @@
   }
   
   a {
-  color:#2A90D1;
+  color:#1433be;
   text-decoration:none;
   word-break:break-all
   }
@@ -544,7 +544,7 @@
   }
   
   a:visited {
-  color:#2A90D1
+  color:#1433be
   }
   
   a.div {
