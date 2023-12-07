@@ -6,6 +6,7 @@
 <title>The Eagle Nest</title>
 <link rel=stylesheet href=style.css defer>
 <link rel=stylesheet href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body style=display:none>
 <div class=navbar>
@@ -21,18 +22,22 @@
 <div class=vl></div>
 <div class=navlink><i class=material-icons id=curpage style=font-size:32px>home</i><a href=https://recipes.namenotfound.net/><h4 id=curpage>Home</h4></a></div>
 <div class=vl></div>
-<div class=navlink><i class=material-icons style=font-size:32px>update</i><a href=https://recipes.namenotfound.net/all><h3>Recent</h3></a></div>
+<div class=navlink><i class=material-icons style=font-size:32px>update</i><a href=https://recipes.namenotfound.net/all><h3>New Games</h3></a></div>
 <div class=vl></div>
 <div class=navlink><i class=material-icons style=font-size:32px>folder_open</i><a href=https://recipes.namenotfound.net/><h3>Archive</h3></a></div>
+<div class=vl></div>
+<div data-netlify-identity-menu class=navlink><i class=material-icons style=font-size:32px>passkey</i><a href=https://recipes.namenotfound.net/><h3>Login/SignUp</h3></a></div>
 </div>
 </div>
 <input id=menu_toggle type=checkbox>
 <div class=menu_mobile>
 <div class=navlink><i class=material-icons id=curpage style=font-size:32px>home</i><a href=https://recipes.namenotfound.net/><h4 id=curpage>Home</h4></a></div>
 <div class=hl></div>
-<div class=navlink><i class=material-icons style=font-size:32px>update</i><a href=https://recipes.namenotfound.net/all><h3>Recent</h3></a></div>
+<div class=navlink><i class=material-icons style=font-size:32px>update</i><a href=https://recipes.namenotfound.net/all><h3>New Games</h3></a></div>
 <div class=hl></div>
 <div class=navlink><i class=material-icons style=font-size:32px>folder_open</i><a href=https://recipes.namenotfound.net/><h3>Archive</h3></a></div>
+<div class=hl></div>
+<div data-netlify-identity-menu class=navlink><i class=material-icons style=font-size:32px>passkey</i><a href=https://recipes.namenotfound.net/><h3>Login/SignUp</h3></a></div>
 <div class=hl></div>
 </div>
 <div class=content1>
@@ -81,5 +86,38 @@
 </div>
 </footer>
 </body>
+<div data-netlify-identity-button>Login with Netlify Identity</div>
+  <script>// Open the modal
+    netlifyIdentity.open();
+    
+    // Get the current user:
+    // Available after on('init') is invoked
+    const user = netlifyIdentity.currentUser();
+    
+    // Bind to events
+    netlifyIdentity.on('init', user => console.log('init', user));
+    netlifyIdentity.on('login', user => console.log('login', user));
+    netlifyIdentity.on('logout', () => console.log('Logged out'));
+    netlifyIdentity.on('error', err => console.error('Error', err));
+    netlifyIdentity.on('open', () => console.log('Widget opened'));
+    netlifyIdentity.on('close', () => console.log('Widget closed'));
+    
+    // Unbind from events
+    netlifyIdentity.off('login'); // to unbind all registered handlers
+    netlifyIdentity.off('login', handler); // to unbind a single handler
+    
+    // Close the modal
+    netlifyIdentity.close();
+    
+    // Log out the user
+    netlifyIdentity.logout();
+    
+    // Refresh the user's JWT
+    // Call in on('login') handler to ensure token refreshed after it expires (1hr)  
+    // Note: this method returns a promise.
+    netlifyIdentity.refresh().then((jwt)=>console.log(jwt))
+    
+    // Change language
+    netlifyIdentity.setLocale('en');</script>
 <script>document.addEventListener("DOMContentLoaded",function(){document.body.style.display="block"});</script>
 </html>
