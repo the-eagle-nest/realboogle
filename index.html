@@ -5,438 +5,247 @@
     <script src="https://cdn.jsdelivr.net/npm/sass@1.69.7/sass.default.min.js"></script>
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <style>
-       /* GLOBAL STYLES
-    -------------------------------------------------- */
-    /* Padding below the footer and lighter body text */
 
-    body {
-      padding-bottom: 40px;
-      color: #5a5a5a;
-    }
-
-    /* CUSTOMIZE THE NAVBAR
-    -------------------------------------------------- */
-
-    /* Special class on .container surrounding .navbar, used for positioning it into place. */
-    .navbar-wrapper {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 10;
-      margin-top: 20px;
-      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-    }
-    .navbar-wrapper .navbar {
-
-    }
-
-    /* Remove border and change up box shadow for more contrast */
-    .navbar .navbar-inner {
-      border: 0;
-      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-              box-shadow: 0 2px 10px rgba(0,0,0,.25);
-    }
-
-    /* Downsize the brand/project name a bit */
-    .navbar .brand {
-      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
-      font-size: 16px;
-      font-weight: bold;
-      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-    }
-    .navbar .nav > li > a {
-      padding: 15px 20px;
-    }
-    .navbar .btn-navbar {
-      margin-top: 10px;
-    }
-
-
-
-    /* CUSTOMIZE THE CAROUSEL
-    -------------------------------------------------- */
-
-    /* Carousel base class */
-    .carousel {
-      margin-bottom: 60px;
-    }
-
-    .carousel .container {
-      position: relative;
-      z-index: 9;
-    }
-
-    .carousel-control {
-      height: 80px;
-      margin-top: 0;
-      font-size: 120px;
-      text-shadow: 0 1px 1px rgba(0,0,0,.4);
-      background-color: transparent;
-      border: 0;
-      z-index: 10;
-    }
-
-    .carousel .item {
-      height: 500px;
-    }
-    .carousel img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      height: 500px;
-    }
-
-    .carousel-caption {
-      background-color: transparent;
-      position: static;
-      max-width: 550px;
-      padding: 0 20px;
-      margin-top: 200px;
-    }
-    .carousel-caption h1,
-    .carousel-caption .lead {
-      margin: 0;
-      line-height: 1.25;
-      color: #fff;
-      text-shadow: 0 1px 1px rgba(0,0,0,.4);
-    }
-    .carousel-caption .btn {
-      margin-top: 10px;
-    }
-
-
-
-    /* MARKETING CONTENT
-    -------------------------------------------------- */
-
-    /* Center align the text within the three columns below the carousel */
-    .marketing .span4 {
-      text-align: center;
-    }
-    .marketing h2 {
-      font-weight: normal;
-    }
-    .marketing .span4 p {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-
-
-    /* Featurettes
-    ------------------------- */
-
-    .featurette-divider {
-      margin: 80px 0; /* Space out the Bootstrap <hr> more */
-    }
-    .featurette {
-      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
-      overflow: hidden; /* Vertically center images part 2: clear their floats. */
-    }
-    .featurette-image {
-      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
-    }
-
-    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
-    .featurette-image.pull-left {
-      margin-right: 40px;
-    }
-    .featurette-image.pull-right {
-      margin-left: 40px;
-    }
-
-    /* Thin out the marketing headings */
-    .featurette-heading {
-      font-size: 50px;
-      font-weight: 300;
-      line-height: 1;
-      letter-spacing: -1px;
-    }
-
-
-
-    /* RESPONSIVE CSS
-    -------------------------------------------------- */
-
-    @media (max-width: 979px) {
-
-      .container.navbar-wrapper {
-        margin-bottom: 0;
-        width: auto;
+      /* GLOBAL STYLES
+      -------------------------------------------------- */
+      /* Padding below the footer and lighter body text */
+  
+      body {
+        padding-bottom: 40px;
+        color: #5a5a5a;
       }
-      .navbar-inner {
-        border-radius: 0;
-        margin: -20px 0;
+  
+  
+  
+      /* CUSTOMIZE THE NAVBAR
+      -------------------------------------------------- */
+  
+      /* Special class on .container surrounding .navbar, used for positioning it into place. */
+      .navbar-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        margin-top: 20px;
+        margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
       }
-
-      .carousel .item {
-        height: 500px;
+      .navbar-wrapper .navbar {
+  
       }
-      .carousel img {
-        width: auto;
-        height: 500px;
+  
+      /* Remove border and change up box shadow for more contrast */
+      .navbar .navbar-inner {
+        border: 0;
+        -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+           -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+                box-shadow: 0 2px 10px rgba(0,0,0,.25);
       }
-
-      .featurette {
-        height: auto;
-        padding: 0;
+  
+      /* Downsize the brand/project name a bit */
+      .navbar .brand {
+        padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+        font-size: 16px;
+        font-weight: bold;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.5);
       }
-      .featurette-image.pull-left,
-      .featurette-image.pull-right {
-        display: block;
-        float: none;
-        max-width: 40%;
-        margin: 0 auto 20px;
+  
+      /* Navbar links: increase padding for taller navbar */
+      .navbar .nav > li > a {
+        padding: 15px 20px;
       }
-    }
-
-
-    @media (max-width: 767px) {
-
-      .navbar-inner {
-        margin: -20px;
+  
+      /* Offset the responsive button for proper vertical alignment */
+      .navbar .btn-navbar {
+        margin-top: 10px;
       }
-
+  
+  
+  
+      /* CUSTOMIZE THE CAROUSEL
+      -------------------------------------------------- */
+  
+      /* Carousel base class */
       .carousel {
-        margin-left: -20px;
-        margin-right: -20px;
+        margin-bottom: 60px;
       }
+  
       .carousel .container {
-
+        position: relative;
+        z-index: 9;
       }
+  
+      .carousel-control {
+        height: 80px;
+        margin-top: 0;
+        font-size: 120px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.4);
+        background-color: transparent;
+        border: 0;
+        z-index: 10;
+      }
+  
       .carousel .item {
-        height: 300px;
+        height: 500px;
       }
       .carousel img {
-        height: 300px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 500px;
       }
+  
       .carousel-caption {
-        width: 65%;
-        padding: 0 70px;
-        margin-top: 100px;
+        background-color: transparent;
+        position: static;
+        max-width: 550px;
+        padding: 0 20px;
+        margin-top: 200px;
       }
-      .carousel-caption h1 {
-        font-size: 30px;
+      .carousel-caption h1,
+      .carousel-caption .lead {
+        margin: 0;
+        line-height: 1.25;
+        color: #fff;
+        text-shadow: 0 1px 1px rgba(0,0,0,.4);
       }
-      .carousel-caption .lead,
       .carousel-caption .btn {
-        font-size: 18px;
+        margin-top: 10px;
       }
-
-      .marketing .span4 + .span4 {
-        margin-top: 40px;
+  
+  
+  
+      /* MARKETING CONTENT
+      -------------------------------------------------- */
+  
+      /* Center align the text within the three columns below the carousel */
+      .marketing .span4 {
+        text-align: center;
       }
-
-    }
-    @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,900,300);
-
-.widget-container {
-  width: 612px;
-  height: 412px;
-  display: block;
-  background-color: #313e45;
-  border-radius: 25px;
-/*   border: 5px solid #eceff1; */
-  margin: 0 auto;
-}
-
-
-/* Widget 4 Quarter Division here */
-
-.top-left {
-  height: 60%;
-  width: 50%;
-  /*   background-color:red; */
-  padding: 55px 0 0 70px;
-  display: inline-block;
-}
-
-.top-right {
-  height: 60%;
-  width: 50%;
-  /*   background-color: blue; */
-  float: right;
-  padding: 55px 0 0 0;
-}
-
-.bottom-left {
-  height: 40%;
-  width: 45%;
-  /*   background-color:orange; */
-  float: left;
-  margin: 0;
-  padding: 40px 0 0 50px;
-}
-
-.bottom-right {
-  height: 40%;
-  width: 55%;
-  /*   background-color: brown; */
-  float: right;
-  padding: 25px 0 0 60px;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-  padding: 0;
-}
-
-
-/* Top-left Div CSS */
-
-#city {
-  font-weight: 900;
-  font-size: 25px;
-}
-
-#day {
-  font-weight: 700;
-  font-size: 25px;
-  margin-top: 18px;
-}
-
-#date {
-  font-weight: 500;
-  font-size: 20px;
-  margin-top: 4px;
-}
-
-#time {
-  font-weight: 400;
-  font-size: 18px;
-  margin-top: 8px;
-}
-
-#codepen-link {
-  font-weight: 400;
-  font-size: 12px;
-  margin-top: 20px;
-}
-
-.top-left > a {
-  text-decoration: none;
-  color: white;
-}
-
-.top-left > a:hover {
-  color: #b0bec5;
-}
-
-
-/* Top-Right Div CSS */
-
-#weather-status {
-  font-size: 18px;
-  font-weight: 300;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.top-right > img {
-  width: 120px;
-  height: 120px;
-  display: block;
-  margin: 15px auto 0 auto;
-}
-
-
-/* Horizontal-Half-divider */
-
-.horizontal-half-divider {
-  width: 100%;
-  height: 3px;
-  margin-top: -5px;
-  background-color: #263238;
-}
-
-.vertical-half-divider {
-  width: 3px;
-  position: absolute;
-  height: 167px;
-  background-color: #263238;
-  float: right;
-  display: inline-block;
-  padding: 0;
-}
-
-
-/* Bottom-left CSS */
-
-#temperature,
-#celsius,
-#temp-divider,
-#fahrenheit {
-  display: inline;
-  vertical-align: middle;
-}
-
-#temperature {
-  font-size: 60px;
-  font-weight: 800;
-  margin-right: 5px;
-}
-
-#celsius {
-  margin-right: 10px;
-}
-
-#fahrenheit {
-  margin-right: 5px;
-  color: #b0bec5;
-}
-
-#celsius,
-#temp-divider,
-#fahrenheit {
-  font-size: 30px;
-  font-weight: 800;
-}
-
-#celsius:hover,
-#fahrenheit:hover {
-  cursor: pointer;
-}
-
-
-
-
-/* Bottom-Right CSS */
-
-.other-details-key {
-  float: left;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.other-details-values {
-  float: left;
-  font-size: 16px;
-  font-weight: 400;
-  margin-left: 40px;
-}
-
-.watermark-link {
-  text-decoration:none;
-  color:#b0bec5;
-}
-
-.watermark-link:hover {
-  color:white;
-  text-decoration:none;
-}
-
-.watermark {
-  margin-top:10px;
-  text-align:center;
-  font-weight:400;
-}
-    </style>
-    
+      .marketing h2 {
+        font-weight: normal;
+      }
+      .marketing .span4 p {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+  
+  
+      /* Featurettes
+      ------------------------- */
+  
+      .featurette-divider {
+        margin: 80px 0; /* Space out the Bootstrap <hr> more */
+      }
+      .featurette {
+        padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+        overflow: hidden; /* Vertically center images part 2: clear their floats. */
+      }
+      .featurette-image {
+        margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+      }
+  
+      /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+      .featurette-image.pull-left {
+        margin-right: 40px;
+      }
+      .featurette-image.pull-right {
+        margin-left: 40px;
+      }
+  
+      /* Thin out the marketing headings */
+      .featurette-heading {
+        font-size: 50px;
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: -1px;
+      }
+  
+  
+  
+      /* RESPONSIVE CSS
+      -------------------------------------------------- */
+  
+      @media (max-width: 979px) {
+  
+        .container.navbar-wrapper {
+          margin-bottom: 0;
+          width: auto;
+        }
+        .navbar-inner {
+          border-radius: 0;
+          margin: -20px 0;
+        }
+  
+        .carousel .item {
+          height: 500px;
+        }
+        .carousel img {
+          width: auto;
+          height: 500px;
+        }
+  
+        .featurette {
+          height: auto;
+          padding: 0;
+        }
+        .featurette-image.pull-left,
+        .featurette-image.pull-right {
+          display: block;
+          float: none;
+          max-width: 40%;
+          margin: 0 auto 20px;
+        }
+      }
+  
+  
+      @media (max-width: 767px) {
+  
+        .navbar-inner {
+          margin: -20px;
+        }
+  
+        .carousel {
+          margin-left: -20px;
+          margin-right: -20px;
+        }
+        .carousel .container {
+  
+        }
+        .carousel .item {
+          height: 300px;
+        }
+        .carousel img {
+          height: 300px;
+        }
+        .carousel-caption {
+          width: 65%;
+          padding: 0 70px;
+          margin-top: 100px;
+        }
+        .carousel-caption h1 {
+          font-size: 30px;
+        }
+        .carousel-caption .lead,
+        .carousel-caption .btn {
+          font-size: 18px;
+        }
+  
+        .marketing .span4 + .span4 {
+          margin-top: 40px;
+        }
+  
+        .featurette-heading {
+          font-size: 30px;
+        }
+        .featurette .lead {
+          font-size: 18px;
+          line-height: 1.5;
+        }
+  
+      }
+      </style>
   </head>
 <body cz-shortcut-listen="true">
 
@@ -521,9 +330,9 @@ p {
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
   <div class="container marketing">
-    
-    <iframe id="index.html-f6a7ebd4-0361-af9d-48c8-24d5cca68ede" src="https://cdpn.io/cpe/boomboom/index.html?key=index.html-f6a7ebd4-0361-af9d-48c8-24d5cca68ede" allow="camera; display-capture; geolocation; microphone; web-share" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" class="result-iframe iframe-visual-update" name="CodePen" loading="lazy"></iframe>
-
+    <center>
+    <iframe style="width: 300px; height: 250px; border: none;" id="index.html-f6a7ebd4-0361-af9d-48c8-24d5cca68ede" src="https://cdpn.io/cpe/boomboom/index.html?key=index.html-f6a7ebd4-0361-af9d-48c8-24d5cca68ede" allow="camera; display-capture; geolocation; microphone; web-share" allowfullscreen="true" allowpaymentrequest="true" allowtransparency="true" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" class="result-iframe iframe-visual-update" loading="lazy"></iframe>
+  </center>
     <!-- FOOTER -->
     <footer>
       <p class="pull-right"><a href="#">Back to top</a></p>
