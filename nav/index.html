@@ -215,7 +215,7 @@ body {
                   contentDiv.innerHTML = '';
                   break;
               case 'surveyid1':
-                  contentDiv.innerHTML = ' <form name="Do you agree with split lunches" action="../index.html" method="POST" data-netlify="true"> <input type="hidden" name="subject" value="New Survey response from %{formName} (%{submissionId})" /> <label>Do you agree with split lunches?<select name="vote[]" multiple> <option class="radio" value="Yes">Yes</option> <option class="radio" value="No">No</option></select></label> <button type="submit">Submit</button> </p> </form> ';
+                  contentDiv.innerHTML = ' <form name="Do you agree with split lunches" method="POST" data-netlify="true"> <input type="hidden" name="subject" value="New Survey response from %{formName}" /> <label>Do you agree with split lunches?<select name="vote[]" radio> <option class="radio" value="Yes">Yes</option> <option class="radio" value="No">No</option></select></label> <button type="submit">Submit</button> </p> </form> ';
                   break;
               case 'archive':
                   contentDiv.innerHTML = '';
