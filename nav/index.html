@@ -6,7 +6,16 @@
     <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link href="../bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-    
+    <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+        var adobeDCView = new AdobeDC.View({clientId: "44148a88854c43b9894f425f8d8c4492", divId: "adobe-dc-view"});
+        adobeDCView.previewFile({
+          content:{location: {url: "https://update5new--eaglenest.netlify.app/newspapers/Oct%20Menu.pdf"}},
+          metaData:{fileName: "Oct Menu.pdf"}
+        }, {showAnnotationTools: false, showPrintPDF: false});
+      });
+    </script>
     <style>
 body {
   padding-bottom:40px;
@@ -190,16 +199,7 @@ body {
       <p>© 2024 NameNotFound&#46;Net <a href="#">SiteMap</a> · <a href="#">Contact</a></p>
     </footer>
   </div><!-- /.container -->
-  <script src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
-  <script type="text/javascript">
-    document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-      var adobeDCView = new AdobeDC.View({clientId: "44148a88854c43b9894f425f8d8c4492", divId: "adobe-dc-view"});
-      adobeDCView.previewFile({
-        content:{location: {url: "https://update5new--eaglenest.netlify.app/newspapers/Oct%20Menu.pdf"}},
-        metaData:{fileName: "Oct Menu.pdf"}
-      }, {showAnnotationTools: false, showPrintPDF: false});
-    });
-  </script>
+ 
 <script
 src="https://code.jquery.com/jquery-3.7.1.min.js"
 integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
