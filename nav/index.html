@@ -226,11 +226,11 @@ crossorigin="anonymous"></script>
                   break;
               // Add more cases as needed
               default:
-                  contentDiv.innerHTML = '<h2>ERROR. Something happened, Please return to home and contact us.</h2>';
+                  contentDiv.innerHTML = '<h2>ERROR (page not defined). Oops!, Something happened, Please return to home and contact us.</h2>';
           }
       } else {
           // Default content if no 'page' parameter is provided
-          contentDiv.innerHTML = '<h2>ERROR. Something happened, Please return to home and contact us.</h2>';
+          contentDiv.innerHTML = '<h2>ERROR (page not defined). Oops!, Something happened, Please return to home and contact us.</h2>';
       }
   }
 
@@ -245,7 +245,7 @@ crossorigin="anonymous"></script>
     document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
       var adobeDCView = new AdobeDC.View({clientId: "44148a88854c43b9894f425f8d8c4492", divId: "adobe-dc-view"});
       adobeDCView.previewFile({
-        content:{location: {url: "https://eaglenest.netlify.app/newspapers/Oct Menu.pdf"}},
+        content:{location: {url: "https://update5new--eaglenest.netlify.app/newspapers/Oct Menu.pdf"}},
         metaData:{fileName: "Oct Menu.pdf"}
       }, {showAnnotationTools: false, showPrintPDF: false});
     });
