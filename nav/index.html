@@ -183,8 +183,7 @@ body {
   <div class="container">
     <!-- FOOTER -->
     <footer>
-      <p class="pull-right"><a href="#">Back to top</a></p>
-      <p>© 2024 NameNotFound&#46;Net <a href="#">Contact Us</a></p>
+      <p>© <span id="copyrightYear"></span> NameNotFound&#46;Net <a href="#">Contact Us</a></p>
     </footer>
   </div><!-- /.container -->
  
@@ -233,5 +232,12 @@ crossorigin="anonymous"></script>
 
   window.onload = updateContent;
 </script>
+<script>
+  // Get the current year
+  var currentYear = new Date().getFullYear();
+
+  document.getElementById('copyrightYear').innerText = currentYear;
+</script>
+
 </body>
 </html>
