@@ -215,7 +215,7 @@ body {
                   contentDiv.innerHTML = '';
                   break;
               case 'surveyid1':
-                  contentDiv.innerHTML = '<form name="Do you agree with split lunches?" method="POST" data-netlify="true"><input type="hidden" name="Do you agree with split lunches?" value="myForm"><label><input type="radio" name="answer" value="yes" required>Yes</label><label><input type="radio" name="answer" value="no" required>No</label><button type="submit">Submit</button></form>';
+                  contentDiv.innerHTML = '<center><br><br><br><h2>Do you agree with split lunches?</h2><br><form name="Do you agree with split lunches?" method="POST" data-netlify="true"><input type="hidden" name="Do you agree with split lunches?" value="myForm"><label><input type="radio" name="answer" value="yes" required>Yes</label><label><input type="radio" name="answer" value="no" required>No</label><button type="submit">Submit</button></form><br><br></center>';
                   break;
               case 'archive':
                   contentDiv.innerHTML = '';
@@ -241,6 +241,16 @@ body {
 
   document.getElementById('copyrightYear').innerText = currentYear;
 </script>
+<script>
+  // Add JavaScript to redirect after form submission
+  document.addEventListener('DOMContentLoaded', function() {
+      var form = document.forms['myForm'];
 
+      form.addEventListener('submit', function() {
+          // Redirect to the home page after form submission
+          window.location.href = '../';
+      });
+  });
+</script>
 </body>
 </html>
