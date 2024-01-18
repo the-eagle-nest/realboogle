@@ -244,27 +244,26 @@ body {
   //Newspaper PDF URL (Compressed Only)
   var pdfUrl2 = 'https://eaglenest.netlify.app/newspapers/October%20Newspaper.pdf';
 
-  // Create the first iframe
-  var iframe1 = document.createElement('iframe');
-  iframe1.src = 'https://docs.google.com/viewer?url=' + pdfUrl1 + '&embedded=true';
-  iframe1.style.width = '100%';
-  iframe1.style.height = '100%';
-  iframe1.frameBorder = '0';
+  
+  function createPdfViewer(containerId, pdfUrl) {
+    var container = document.getElementById(containerId);
 
-  // Get the first container div and append the first iframe
-  var pdfViewerContainer1 = document.getElementById('pdfViewerContainer1');
-  pdfViewerContainer1.appendChild(iframe1);
+    if (container) {
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://docs.google.com/gview?url=' + pdfUrl + '&embedded=true';
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      iframe.frameBorder = '0';
 
-  // Create the second iframe
-  var iframe2 = document.createElement('iframe');
-  iframe2.src = 'https://docs.google.com/viewer?url=' + pdfUrl2 + '&embedded=true';
-  iframe2.style.width = '100%';
-  iframe2.style.height = '100%';
-  iframe2.frameBorder = '0';
+      container.appendChild(iframe);
+    } else {
+      console.error('Container not found:', containerId);
+    }
+  }
 
-  // Get the second container div and append the second iframe
-  var pdfViewerContainer2 = document.getElementById('pdfViewerContainer2');
-  pdfViewerContainer2.appendChild(iframe2);
+  // Create PDF viewers
+  createPdfViewer('pdfViewerContainer1', pdfUrl1);
+  createPdfViewer('pdfViewerContainer2', pdfUrl2);
 </script>
 </body>
 </html>
