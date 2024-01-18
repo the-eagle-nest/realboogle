@@ -226,34 +226,35 @@ body {
       
         document.getElementById('copyrightYear').innerText = currentYear;
       </script>
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
           // Lunch PDF URL (Compressed Only)
           var pdfUrl1 = 'https://eaglenest.netlify.app/newspapers/Jan%20Menu.pdf';
           // Newspaper PDF URL (Compressed Only)
           var pdfUrl2 = 'https://eaglenest.netlify.app/newspapers/October%20Newspaper.pdf';
-      
+  
           function createPdfViewer(containerId, pdfUrl) {
-            var container = document.getElementById(containerId);
-      
-            if (container) {
-              var iframe = document.createElement('iframe');
-              iframe.src = 'https://docs.google.com/gview?url=' + pdfUrl + '&embedded=true';
-              iframe.style.width = '100%';
-              iframe.style.height = '100%';
-              iframe.frameBorder = '0';
-      
-              container.appendChild(iframe);
-            } else {
-              console.error('Container not found:', containerId);
-            }
+              var container = document.getElementById(containerId);
+  
+              if (container) {
+                  var iframe = document.createElement('iframe');
+                  iframe.src = 'https://docs.google.com/gview?url=' + pdfUrl + '&embedded=true';
+                  iframe.style.width = '100%';
+                  iframe.style.height = '100%';
+                  iframe.frameBorder = '0';
+  
+                  container.appendChild(iframe);
+              } else {
+                  console.error('Container not found:', containerId);
+              }
           }
-      
+  
           // Create PDF viewers
           createPdfViewer('pdfViewerContainer1', pdfUrl1);
           createPdfViewer('pdfViewerContainer2', pdfUrl2);
-        });
-      </script>
+      });
+  </script>
+  
       
   </head>
 <body cz-shortcut-listen="true">
