@@ -220,43 +220,35 @@ body {
       
         window.onload = updateContent;
       </script>
-      <script>
-        // Get the current year
-        var currentYear = new Date().getFullYear();
-      
-        document.getElementById('copyrightYear').innerText = currentYear;
-      </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-          // Lunch PDF URL (Compressed Only)
-          var pdfUrl1 = 'https://eaglenest.netlify.app/newspapers/Jan%20Menu.pdf';
-          // Newspaper PDF URL (Compressed Only)
-          var pdfUrl2 = 'https://eaglenest.netlify.app/newspapers/October%20Newspaper.pdf';
-  
-          function createPdfViewer(containerId, pdfUrl) {
-              var container = document.getElementById(containerId);
-  
-              if (container) {
-                  var iframe = document.createElement('iframe');
-                  iframe.src = 'https://docs.google.com/gview?url=' + pdfUrl + '&embedded=true';
-                  iframe.style.width = '100%';
-                  iframe.style.height = '100%';
-                  iframe.frameBorder = '0';
-  
-                  container.appendChild(iframe);
-              } else {
-                  console.error('Container not found:', containerId);
-              }
-          }
-  
-          // Create PDF viewers
-          createPdfViewer('pdfViewerContainer1', pdfUrl1);
-          createPdfViewer('pdfViewerContainer2', pdfUrl2);
-      });
-  </script>
-  
-      
-  </head>
+   <script>
+    window.onload = function () {
+        // Lunch PDF URL (Compressed Only)
+        var pdfUrl1 = 'https://eaglenest.netlify.app/newspapers/Jan%20Menu.pdf';
+        // Newspaper PDF URL (Compressed Only)
+        var pdfUrl2 = 'https://eaglenest.netlify.app/newspapers/October%20Newspaper.pdf';
+
+        function createPdfViewer(containerId, pdfUrl) {
+            var container = document.getElementById(containerId);
+
+            if (container) {
+                var iframe = document.createElement('iframe');
+                iframe.src = 'https://docs.google.com/gview?url=' + pdfUrl + '&embedded=true';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.frameBorder = '0';
+
+                container.appendChild(iframe);
+            } else {
+                console.error('Container not found:', containerId);
+            }
+        }
+
+        // Create PDF viewers
+        createPdfViewer('pdfViewerContainer1', pdfUrl1);
+        createPdfViewer('pdfViewerContainer2', pdfUrl2);
+    };
+</script>
+ </head>
 <body cz-shortcut-listen="true">
   <div id="content"><!-- dynamic content is supposed to be here --><script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ef.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialFormsScript"));</script></div>
    <div class="container">
@@ -267,5 +259,12 @@ body {
   </div><!-- /.container -->
   <script src="https://code.jquery.com/jquery.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+  // Get the current year
+  var currentYear = new Date().getFullYear();
+
+  document.getElementById('copyrightYear').innerText = currentYear;
+</script>
 </body>
 </html>
