@@ -9,392 +9,450 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.5/css/weather-icons.min.css" rel="stylesheet">
     <style>
 body {
-  padding-bottom:40px;
-  color:#5a5a5a
+padding-bottom:40px;
+color:#5a5a5a
 }
+
 .navbar-wrapper {
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  z-index:15;
-  margin-top:20px;
-  margin-bottom:-90px
+position:absolute;
+top:0;
+left:0;
+right:0;
+z-index:15;
+margin-top:20px;
+margin-bottom:-90px
 }
+
 .navbar .navbar-inner {
-  border:0;
-  -webkit-box-shadow:0 2px 10px rgba(0,0,0,.25);
-  -moz-box-shadow:0 2px 10px rgba(0,0,0,.25);
-  box-shadow:0 2px 10px rgba(0,0,0,.25)
+border:0;
+-webkit-box-shadow:0 2px 10px rgba(0,0,0,.25);
+-moz-box-shadow:0 2px 10px rgba(0,0,0,.25);
+box-shadow:0 2px 10px rgba(0,0,0,.25)
 }
+
 .navbar .brand {
-  padding:14px 20px 16px;
-  font-size:16px;
-  font-weight:700;
-  text-shadow:0 -1px 0 rgba(0,0,0,.5)
+padding:14px 20px 16px;
+font-size:16px;
+font-weight:700;
+text-shadow:0 -1px 0 rgba(0,0,0,.5)
 }
+
 .navbar .nav>li>a {
-  padding:15px 20px
+padding:15px 20px
 }
+
 .navbar .btn-navbar {
-  margin-top:10px
+margin-top:10px
 }
+
 .carousel {
-  margin-bottom:60px
+margin-bottom:60px
 }
+
 .carousel .container {
-  position:relative;
-  z-index:9
+position:relative;
+z-index:9
 }
+
 .carousel-control {
-  height:80px;
-  margin-top:0;
-  font-size:120px;
-  text-shadow:0 1px 1px rgba(0,0,0,.4);
-  background-color:transparent;
-  border:0;
-  z-index:10
+height:80px;
+margin-top:0;
+font-size:120px;
+text-shadow:0 1px 1px rgba(0,0,0,.4);
+background-color:transparent;
+border:0;
+z-index:10
 }
+
 .carousel .item {
-  height:500px
+height:500px
 }
+
 .carousel img {
-  position:absolute;
-  top:0;
-  left:0;
-  min-width:100%;
-  height:500px
+position:absolute;
+top:0;
+left:0;
+min-width:100%;
+height:500px
 }
+
 .carousel-caption {
-  background-color:transparent;
-  position:static;
-  max-width:550px;
-  padding:0 20px;
-  margin-top:200px
+background-color:transparent;
+position:static;
+max-width:550px;
+padding:0 20px;
+margin-top:200px
 }
-.carousel-caption .lead,
-.carousel-caption h1 {
-  margin:0;
-  line-height:1.25;
-  color:#fff;
-  text-shadow:0 1px 1px rgba(0,0,0,.4)
+
+.carousel-caption .lead,.carousel-caption h1 {
+margin:0;
+line-height:1.25;
+color:#fff;
+text-shadow:0 1px 1px rgba(0,0,0,.4)
 }
+
 .carousel-caption .btn {
-  margin-top:10px
+margin-top:10px
 }
+
 .marketing .span4 {
-  text-align:center
+text-align:center
 }
+
 .marketing h2 {
-  font-weight:400
+font-weight:400
 }
+
 .marketing .span4 p {
-  margin-left:10px;
-  margin-right:10px
+margin-left:10px;
+margin-right:10px
 }
+
 .featurette-divider {
-  margin:80px 0
+margin:80px 0
 }
+
 .featurette {
-  padding-top:120px;
-  overflow:hidden
+padding-top:120px;
+overflow:hidden
 }
+
 .featurette-image {
-  margin-top:-120px
+margin-top:-120px
 }
+
 .featurette-image.pull-left {
-  margin-right:40px
+margin-right:40px
 }
+
 .featurette-image.pull-right {
-  margin-left:40px
+margin-left:40px
 }
+
 .featurette-heading {
-  font-size:50px;
-  font-weight:300;
-  line-height:1;
-  letter-spacing:-1px
+font-size:50px;
+font-weight:300;
+line-height:1;
+letter-spacing:-1px
 }
+
 @media (max-width:979px) {
-  .container.navbar-wrapper {
-    margin-bottom:0;
-    width:auto
-  }
-  .navbar-inner {
-    border-radius:0;
-    margin:-20px 0
-  }
-  .carousel .item {
-    height:500px
-  }
-  .carousel img {
-    width:auto;
-    height:500px
-  }
-  .featurette {
-    height:auto;
-    padding:0
-  }
-  .featurette-image.pull-left,
-  .featurette-image.pull-right {
-    display:block;
-    float:none;
-    max-width:40%;
-    margin:0 auto 20px
-  }
+.container.navbar-wrapper {
+margin-bottom:0;
+width:auto
 }
+
+.navbar-inner {
+border-radius:0;
+margin:-20px 0
+}
+
+.carousel .item {
+height:500px
+}
+
+.carousel img {
+width:auto;
+height:500px
+}
+
+.featurette {
+height:auto;
+padding:0
+}
+
+.featurette-image.pull-left,.featurette-image.pull-right {
+display:block;
+float:none;
+max-width:40%;
+margin:0 auto 20px
+}
+}
+
 @media (max-width:767px) {
-  .navbar-inner {
-    margin:-20px
-  }
-  .carousel {
-    margin-left:-20px;
-    margin-right:-20px
-  }
-  .carousel .item {
-    height:300px
-  }
-  .carousel img {
-    height:300px
-  }
-  .carousel-caption {
-    width:65%;
-    padding:0 70px;
-    margin-top:100px
-  }
-  .carousel-caption h1 {
-    font-size:30px
-  }
-  .carousel-caption .btn,
-  .carousel-caption .lead {
-    font-size:18px
-  }
-  .marketing .span4+.span4 {
-    margin-top:40px
-  }
-  .featurette-heading {
-    font-size:30px
-  }
-  .featurette .lead {
-    font-size:18px;
-    line-height:1.5
-  }
+.navbar-inner {
+margin:-20px
 }
+
+.carousel {
+margin-left:-20px;
+margin-right:-20px
+}
+
+.carousel .item {
+height:300px
+}
+
+.carousel img {
+height:300px
+}
+
+.carousel-caption {
+width:65%;
+padding:0 70px;
+margin-top:100px
+}
+
+.carousel-caption h1 {
+font-size:30px
+}
+
+.carousel-caption .btn,.carousel-caption .lead {
+font-size:18px
+}
+
+.marketing .span4+.span4 {
+margin-top:40px
+}
+
+.featurette-heading {
+font-size:30px
+}
+
+.featurette .lead {
+font-size:18px;
+line-height:1.5
+}
+}
+
 .weather-app {
-  background:#fff;
-  color:#444;
-  max-width:375px;
-  margin:0 auto;
-  box-shadow:0 2px 3px rgba(0,0,0,.1);
-  border-radius:6px;
-  box-sizing:border-box;
-  padding:10px;
-  overflow:hidden;
-  position:relative
+background:#fff;
+color:#444;
+max-width:375px;
+margin:0 auto;
+box-shadow:0 2px 3px rgba(0,0,0,.1);
+border-radius:6px;
+box-sizing:border-box;
+padding:10px;
+overflow:hidden;
+position:relative
 }
+
 .weather-app .date-time {
-  margin-top:20px;
-  margin-bottom:15px;
-  border-bottom:1px solid #959595;
-  padding-bottom:15px;
-  position:relative;
-  overflow:hidden;
-  font-size:94%
+margin-top:20px;
+margin-bottom:15px;
+border-bottom:1px solid #959595;
+padding-bottom:15px;
+position:relative;
+overflow:hidden;
+font-size:94%
 }
+
 .weather-app .time {
-  font:5.5em/.8em Roboto;
-  float:left;
-  overflow:hidden
+font:5.5em/.8em Roboto;
+float:left;
+overflow:hidden
 }
+
 .weather-app .time span {
-  font-size:.15em;
-  font-weight:700;
-  line-height:1.25em;
-  vertical-align:top;
-  margin-left: 5px;
-
+font-size:.15em;
+font-weight:700;
+line-height:1.25em;
+vertical-align:top;
+margin-left:5px
 }
+
 .weather-app .date {
-  float: right;
-  margin-right: 35px;
-  margin-top:30px
-}
-.weather-app .date .day {
-  font-family:Roboto;
-  font-weight:700
-}
-.weather-app .weather-icon {
-  color:#999;
-  font-size:2.25em;
-  line-height:1.5em;
-  z-index:1;
-  position:absolute;
-  right:5px;
-  top:5px
-}
-.weather-app .location-weather,
-.weather-app .weather-temp {
-  font-size:90%
-}
-.weather-app .location-weather {
-  position:relative
-}
-.weather-app .location-weather label {
-  position:absolute;
-  left:-1px;
-  top:-5px;
-  transition:left .3s ease
-}
-.weather-app .location-weather label.hovered>.set-icon {
-  color:#999;
-  
-}
-.weather-app .location-weather label.hovered,
-.weather-app .location-weather label:hover {
-}
-.weather-app .location-weather label.hovered~.weather-status,
-.weather-app .location-weather label:hover~.weather-status {
-  margin-left: 5px;
-  max-width:208px
-}
-.weather-app .location-weather .set-icon {
-  color:#959595;
-  cursor:pointer;
-  font-size:1.5em;
-  float:left;
-  line-height:1.5em;
-  padding:0 5px 0 0;
-  transition:color .2s ease;
-}
-.weather-app .location-weather .set-icon:hover {
-  color:#999
-}
-.weather-app .location-weather .weather-status {
-  float:left;
-  overflow:hidden;
-  margin-left:-8px;
-  max-width:247px;
-  width:100%;
-  position:relative;
-  transition:all .3s ease
-}
-.weather-app .location-weather .userCity {
-  border:none;
-  box-sizing:border-box;
-  border-bottom:1px solid #1e90ff;
-  font-size:1.25em;
-  padding:0 0 5px 5px;
-  width:100%;
-  visibility:hidden;
-  position:absolute;
-  margin-left:-85px;
-  top:0;
-}
-.weather-app .location-weather .userCity:focus {
-  outline:0;
-  visibility:visible
-}
-.weather-app .location-weather #xBxHack {
-  display:none
-}
-.weather-app .location-weather #xBxHack:checked~.userCity {
-  visibility:visible
-}
-.weather-app .location-weather #xBxHack:checked~.city,
-.weather-app .location-weather #xBxHack:checked~.forcast {
-  visibility:hidden
-}
-.weather-app .location-weather .city {
-  font-family:Roboto;
-  font-weight:700;
-  font-size:1.1em;
-  line-height:.9em;
-  cursor:pointer
-}
-.weather-app .location-weather .forcast {
-  font-size:1em;
-  color:#999;
-  text-transform:capitalize
-}
-.weather-app .weather-temp {
-  float:right;
-  overflow:hidden;
-  margin-top:-1px
-}
-.weather-app .weather-temp .temperature {
-  color:#1e90ff;
-  float:left;
-  font-family:Roboto;
-  font-weight:700;
-  font-size:3.4em;
-  line-height:1em;
-  margin-right:5px;
-  margin-top:-5px
-}
-.weather-app .weather-temp .temperature:after {
-  content:"\00b0";
-  font-size:.7em;
-  font-family:Roboto;
-  line-height:1.1em;
-  vertical-align:text-top
-}
-.weather-app .weather-temp .high-low {
-  color:#999;
-  font-family:Roboto;
-  line-height:1.2em;
-  float:right;
-  text-align:right
-}
-.weather-app .weather-temp .high-low .high:after,
-.weather-app .weather-temp .high-low .low:after {
-  content:"\00b0";
-  font-size:.8em;
-  font-family:Roboto;
-  line-height:1.25em;
-  vertical-align:text-top
-}
-@media screen and (min-width:380px) {
-  .weather-app .weather-icon {
-    color:#fff
-  }
-  .weather-app .weather-icon:after {
-    background:#444;
-    border-radius:50%;
-    border:3px solid #1e90ff;
-    content:"";
-    height:160px;
-    width:160px;
-    position:absolute;
-    top:-90px;
-    right:-90px;
-    z-index:-1
-  }
-  .weather-app .date-time {
-    font-size:110%
-  }
-  .weather-app .location-weather label:hover~.weather-status {
-    max-width:233px
-  }
-  .weather-app .location-weather .weather-status {
-    max-width: 235px;
-    width: 85%;
-    
-  }
-  .weather-app .high-low .high:before,
-  .weather-app .high-low .low:before {
-    font-size:.8em;
-    font-weight:700;
-    text-transform:uppercase;
-    vertical-align:middle;
-    text-align:left
-  }
-  .weather-app .high-low .high:before {
-    content:"high: "
-  }
-  .weather-app .high-low .low:before {
-    content:"low: "
-  }
+float:right;
+margin-right:35px;
+margin-top:30px
 }
 
+.weather-app .date .day {
+font-family:Roboto;
+font-weight:700
+}
+
+.weather-app .weather-icon {
+color:#999;
+font-size:2.25em;
+line-height:1.5em;
+z-index:1;
+position:absolute;
+right:5px;
+top:5px
+}
+
+.weather-app .location-weather,.weather-app .weather-temp {
+font-size:90%
+}
+
+.weather-app .location-weather {
+position:relative
+}
+
+.weather-app .location-weather label {
+position:absolute;
+left:-1px;
+top:-5px;
+transition:left .3s ease
+}
+
+.weather-app .location-weather label.hovered>.set-icon {
+color:#999
+}
+
+.weather-app .location-weather label.hovered~.weather-status,.weather-app .location-weather label:hover~.weather-status {
+margin-left:5px;
+max-width:208px
+}
+
+.weather-app .location-weather .set-icon {
+color:#959595;
+cursor:pointer;
+font-size:1.5em;
+float:left;
+line-height:1.5em;
+padding:0 5px 0 0;
+transition:color .2s ease
+}
+
+.weather-app .location-weather .set-icon:hover {
+color:#999
+}
+
+.weather-app .location-weather .weather-status {
+float:left;
+overflow:hidden;
+margin-left:-8px;
+max-width:247px;
+width:100%;
+position:relative;
+transition:all .3s ease
+}
+
+.weather-app .location-weather .userCity {
+border:none;
+box-sizing:border-box;
+border-bottom:1px solid #1e90ff;
+font-size:1.25em;
+padding:0 0 5px 5px;
+width:100%;
+visibility:hidden;
+position:absolute;
+margin-left:-85px;
+top:0
+}
+
+.weather-app .location-weather .userCity:focus {
+outline:0;
+visibility:visible
+}
+
+.weather-app .location-weather #xBxHack {
+display:none
+}
+
+.weather-app .location-weather #xBxHack:checked~.userCity {
+visibility:visible
+}
+
+.weather-app .location-weather #xBxHack:checked~.city,.weather-app .location-weather #xBxHack:checked~.forcast {
+visibility:hidden
+}
+
+.weather-app .location-weather .city {
+font-family:Roboto;
+font-weight:700;
+font-size:1.1em;
+line-height:.9em;
+cursor:pointer
+}
+
+.weather-app .location-weather .forcast {
+font-size:1em;
+color:#999;
+text-transform:capitalize
+}
+
+.weather-app .weather-temp {
+float:right;
+overflow:hidden;
+margin-top:-1px
+}
+
+.weather-app .weather-temp .temperature {
+color:#1e90ff;
+float:left;
+font-family:Roboto;
+font-weight:700;
+font-size:3.4em;
+line-height:1em;
+margin-right:5px;
+margin-top:-5px
+}
+
+.weather-app .weather-temp .temperature:after {
+content:"\00b0";
+font-size:.7em;
+font-family:Roboto;
+line-height:1.1em;
+vertical-align:text-top
+}
+
+.weather-app .weather-temp .high-low {
+color:#999;
+font-family:Roboto;
+line-height:1.2em;
+float:right;
+text-align:right
+}
+
+.weather-app .weather-temp .high-low .high:after,.weather-app .weather-temp .high-low .low:after {
+content:"\00b0";
+font-size:.8em;
+font-family:Roboto;
+line-height:1.25em;
+vertical-align:text-top
+}
+
+@media screen and (min-width:380px) {
+.weather-app .weather-icon {
+color:#fff
+}
+
+.weather-app .weather-icon:after {
+background:#444;
+border-radius:50%;
+border:3px solid #1e90ff;
+content:"";
+height:160px;
+width:160px;
+position:absolute;
+top:-90px;
+right:-90px;
+z-index:-1
+}
+
+.weather-app .date-time {
+font-size:110%
+}
+
+.weather-app .location-weather label:hover~.weather-status {
+max-width:233px
+}
+
+.weather-app .location-weather .weather-status {
+max-width:235px;
+width:85%
+}
+
+.weather-app .high-low .high:before,.weather-app .high-low .low:before {
+font-size:.8em;
+font-weight:700;
+text-transform:uppercase;
+vertical-align:middle;
+text-align:left
+}
+
+.weather-app .high-low .high:before {
+content:"high: "
+}
+
+.weather-app .high-low .low:before {
+content:"low: "
+}
+}
       </style>
   </head>
 <body cz-shortcut-listen="true">
@@ -402,7 +460,6 @@ body {
     <div class="navbar-wrapper">
       <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
       <div class="container">
-
         <div class="navbar navbar-inverse">
           <div class="navbar-inner">
             <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
@@ -434,7 +491,6 @@ body {
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
         </div><!-- /.navbar -->
-
       </div> <!-- /.container -->
     </div><!-- /.navbar-wrapper -->
   <!-- Carousel -->
@@ -518,202 +574,7 @@ body {
 
   </div><!-- /.container -->
   <script src="https://code.jquery.com/jquery.js"></script>
-<script>
-var weatherModule = (function() {
-"use strict";
-var owm = {
-init: function() {
-this.cacheDom();
-this.bindEvents();
-this.callAPI();
-},
-cacheDom: function() {
-this.xBx = $("#xBxHack");
-this.user_input = $("#userCity");
-this.forcast = $("#forcast");
-this.city = $("#city");
-this.temp = $("#temperature");
-this.tempHigh = $("#high");
-this.tempLow = $("#low");
-this.set_icon = $("#set-icon").parent();
-this.weat_icon = $("#weather-icon");
-this.weat_icon_class = function(time_of_day) {
-var iconClass = "wi-owm-";
-
-if (time_of_day === "PM") {
-  iconClass += "night-";
-} else {
-  iconClass += "day-";
-}
-return iconClass;
-};
-},
-bindEvents: function() {
-this.city.click(this.events.checkBox.bind(this));
-this.city.hover(this.events.hover.bind(this));
-this.set_icon.click(this.events.checkBox.bind(this));
-this.user_input.keypress(this.events.enterKey.bind(this));
-this.user_input.blur(this.events.resetCheckBox.bind(this));
-},
-events: {
-checkBox: function(e) {
-e.preventDefault();
-this.xBx.prop("checked", true);
-this.user_input.focus();
-},
-resetCheckBox: function(e) {
-e.preventDefault();
-if (e.type === "keypress") {
-  this.user_input.blur();
-}
-this.user_input.val("");
-this.xBx.prop("checked", false);
-},
-hover: function(e) {
-this.set_icon.toggleClass("hovered");
-},
-enterKey: function(e) {
-if (e.which === 13 || e.keyCode === 13) {
-  e.preventDefault();
-  this.callAPI(this.user_input.val());
-  this.events.resetCheckBox.apply(this, [e]);
-}
-}
-},
-callAPI: function(url) {
-var apiUrl =
-"//api.openweathermap.org/data/2.5/weather?APPID=d65a9694ae6425d1e080326aab19db69&units=imperial&q=";
-if (url === undefined || url === "") {
-url =
-  "//api.openweathermap.org/data/2.5/weather?APPID=d65a9694ae6425d1e080326aab19db69&units=imperial&q=delano";
-} else {
-while (url.charAt(0) === " ") {
-  url = url.substr(1);
-}
-apiUrl += encodeURIComponent(url);
-url = apiUrl.toLowerCase();
-}
-$.getJSON(url, this.parseData.bind(this));
-},
-parseData: function(json) {
-this.data = {
-name: json.name,
-weather: {
-  description: json.weather[0].description,
-  id: json.weather[0].id
-},
-temp: {
-  current: Math.floor(json.main.temp),
-  high: Math.floor(json.main.temp_max),
-  low: Math.floor(json.main.temp_min)
-}
-};
-this.renderHTML();
-},
-renderHTML: function() {
-this.city.html(this.data.name);
-this.forcast.html(this.data.weather.description);
-this.temp.html(this.data.temp.current);
-this.tempHigh.html(this.data.temp.high);
-this.tempLow.html(this.data.temp.low);
-//DELETE CLASSES
-this.weat_icon.removeClass();
-//RESET CLASSES
-this.weat_icon.addClass("wi wi-fw weather-icon ");
-//ADD NEW CLASS
-this.weat_icon.addClass(this.weat_icon_class() + this.data.weather.id);
-}
-};
-owm.init();
-return {
-time_of_day: owm.weat_icon_class
-};
-})();
-var timeModule = (function() {
-"use strict";
-var dateTime = {
-init: function() {
-this.cacheDom();
-this.render();
-this.refresh();
-},
-cacheDom: function() {
-this.date = new Date();
-this.time = $("#time");
-this.day = $("#day");
-this.month = $("#monDate");
-},
-refresh: function() {
-setInterval(function() {
-dateTime.date = new Date();
-dateTime.render();
-}, 1000);
-},
-render: function() {
-var currentMonth = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec"
-],
-currentDay = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-month = this.date.getMonth(),
-date = this.date.getDate(),
-hour = this.date.getHours(),
-minutes = this.date.getMinutes(),
-day = this.date.getDay(),
-amPM;
-
-/* CHECK TIME
-    --------------------------------*/
-//IF MIDNIGHT
-if (hour === 0) {
-//HOUR EQUALS 12
-hour = 12;
-}
-//CHANGE 24 HOUR TO 12 HOUR
-if (hour > 12) {
-//MINUS 12
-hour -= 12;
-//CHANGE TO PM
-amPM = "PM";
-} else {
-//CHANGE TO AM
-amPM = "AM";
-}
-//IF HOUR IS LESS THAN 10
-if (hour < 10) {
-//ADD 0 TO HOUR
-hour = "0" + hour;
-}
-//GET MINUTES
-//IF MINUTES LESS THAN 10
-if (minutes < 10) {
-//ADD 0 TO MINUTES
-minutes = "0" + minutes;
-}
-//RENDER TIME
-this.time.html(hour + ":" + minutes + "<span>" + amPM + "</span>");
-//SET TIME OF DAT
-weatherModule.time_of_day(amPM);
-//RENDER DAY
-this.day.html(currentDay[day]);
-//RENDER DATE
-this.month.html(currentMonth[month] + " " + date);
-}
-};
-dateTime.init();
-})();
-
-</script>
+<script>var weatherModule=function(){"use strict";var a={init:function(){this.cacheDom(),this.bindEvents(),this.callAPI()},cacheDom:function(){this.xBx=$("#xBxHack"),this.user_input=$("#userCity"),this.forcast=$("#forcast"),this.city=$("#city"),this.temp=$("#temperature"),this.tempHigh=$("#high"),this.tempLow=$("#low"),this.set_icon=$("#set-icon").parent(),this.weat_icon=$("#weather-icon"),this.weat_icon_class=function(a){var b="wi-owm-";return b+="PM"===a?"night-":"day-"}},bindEvents:function(){this.city.click(this.events.checkBox.bind(this)),this.city.hover(this.events.hover.bind(this)),this.set_icon.click(this.events.checkBox.bind(this)),this.user_input.keypress(this.events.enterKey.bind(this)),this.user_input.blur(this.events.resetCheckBox.bind(this))},events:{checkBox:function(a){a.preventDefault(),this.xBx.prop("checked",!0),this.user_input.focus()},resetCheckBox:function(a){a.preventDefault(),"keypress"===a.type&&this.user_input.blur(),this.user_input.val(""),this.xBx.prop("checked",!1)},hover:function(a){this.set_icon.toggleClass("hovered")},enterKey:function(a){(13===a.which||13===a.keyCode)&&(a.preventDefault(),this.callAPI(this.user_input.val()),this.events.resetCheckBox.apply(this,[a]))}},callAPI:function(a){var b="//api.openweathermap.org/data/2.5/weather?APPID=d65a9694ae6425d1e080326aab19db69&units=imperial&q=";if(void 0===a||""===a)a="//api.openweathermap.org/data/2.5/weather?APPID=d65a9694ae6425d1e080326aab19db69&units=imperial&q=delano";else{for(;" "===a.charAt(0);)a=a.substr(1);b+=encodeURIComponent(a),a=b.toLowerCase()}$.getJSON(a,this.parseData.bind(this))},parseData:function(a){this.data={name:a.name,weather:{description:a.weather[0].description,id:a.weather[0].id},temp:{current:Math.floor(a.main.temp),high:Math.floor(a.main.temp_max),low:Math.floor(a.main.temp_min)}},this.renderHTML()},renderHTML:function(){this.city.html(this.data.name),this.forcast.html(this.data.weather.description),this.temp.html(this.data.temp.current),this.tempHigh.html(this.data.temp.high),this.tempLow.html(this.data.temp.low),this.weat_icon.removeClass(),this.weat_icon.addClass("wi wi-fw weather-icon "),this.weat_icon.addClass(this.weat_icon_class()+this.data.weather.id)}};return a.init(),{time_of_day:a.weat_icon_class}}(),timeModule=function(){"use strict";var a={init:function(){this.cacheDom(),this.render(),this.refresh()},cacheDom:function(){this.date=new Date,this.time=$("#time"),this.day=$("#day"),this.month=$("#monDate")},refresh:function(){setInterval(function(){a.date=new Date,a.render()},1e3)},render:function(){var a=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],b=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],c=this.date.getMonth(),d=this.date.getDate(),e=this.date.getHours(),f=this.date.getMinutes(),g=this.date.getDay(),h;0===e&&(e=12),e>12?(e-=12,h="PM"):h="AM",e<10&&(e="0"+e),f<10&&(f="0"+f),this.time.html(e+":"+f+"<span>"+h+"</span>"),weatherModule.time_of_day(h),this.day.html(b[g]),this.month.html(a[c]+" "+d)}};a.init()}();</script>
 
   <script src="./bootstrap/js/bootstrap.min.js"></script>
   <script>
