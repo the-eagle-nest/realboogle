@@ -187,6 +187,36 @@ body {
   <script src="https://code.jquery.com/jquery.js"></script>
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <script>
+  //Make sure link is capitalized
+  //Lunch PDF URL (Compressed Only)
+  var pdfUrl1 = 'eaglenest.netlify.app/newspapers/Jan Menu.pdf';
+  //Newspaper PDF URL (Compressed Only)
+  var pdfUrl2 = 'eaglenest.netlify.app/newspapers/October Newspaper.pdf';
+
+  // Create the first iframe
+  var iframe1 = document.createElement('iframe');
+  iframe1.src = 'https://docs.google.com/viewer?url=' + pdfUrl1 + '&embedded=true';
+  iframe1.style.width = '100%';
+  iframe1.style.height = '100%';
+  iframe1.frameBorder = '0';
+
+  // Get the first container div and append the first iframe
+  var pdfViewerContainer1 = document.getElementById('pdfViewerContainer1');
+  pdfViewerContainer1.appendChild(iframe1);
+
+  // Create the second iframe
+  var iframe2 = document.createElement('iframe');
+  iframe2.src = 'https://docs.google.com/viewer?url=' + pdfUrl2 + '&embedded=true';
+  iframe2.style.width = '100%';
+  iframe2.style.height = '100%';
+  iframe2.frameBorder = '0';
+
+  // Get the second container div and append the second iframe
+  var pdfViewerContainer2 = document.getElementById('pdfViewerContainer2');
+  pdfViewerContainer2.appendChild(iframe2);
+</script>
+
+<script>
   function getQueryParams() {
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
@@ -236,35 +266,6 @@ body {
   var currentYear = new Date().getFullYear();
 
   document.getElementById('copyrightYear').innerText = currentYear;
-</script>
-<script>
-  //Make sure link is capitalized
-  //Lunch PDF URL (Compressed Only)
-  var pdfUrl1 = 'eaglenest.netlify.app/newspapers/Jan Menu.pdf';
-  //Newspaper PDF URL (Compressed Only)
-  var pdfUrl2 = 'eaglenest.netlify.app/newspapers/October Newspaper.pdf';
-
-  // Create the first iframe
-  var iframe1 = document.createElement('iframe');
-  iframe1.src = 'https://docs.google.com/viewer?url=' + pdfUrl1 + '&embedded=true';
-  iframe1.style.width = '100%';
-  iframe1.style.height = '100%';
-  iframe1.frameBorder = '0';
-
-  // Get the first container div and append the first iframe
-  var pdfViewerContainer1 = document.getElementById('pdfViewerContainer1');
-  pdfViewerContainer1.appendChild(iframe1);
-
-  // Create the second iframe
-  var iframe2 = document.createElement('iframe');
-  iframe2.src = 'https://docs.google.com/viewer?url=' + pdfUrl2 + '&embedded=true';
-  iframe2.style.width = '100%';
-  iframe2.style.height = '100%';
-  iframe2.frameBorder = '0';
-
-  // Get the second container div and append the second iframe
-  var pdfViewerContainer2 = document.getElementById('pdfViewerContainer2');
-  pdfViewerContainer2.appendChild(iframe2);
 </script>
 
 </body>
