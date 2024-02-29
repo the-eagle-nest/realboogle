@@ -4,6 +4,11 @@ const fryButton = document.getElementById('fryButton');
 const friedImage = document.getElementById('friedImage');
 const downloadLink = document.getElementById('downloadLink');
 const result = document.getElementById('result');
+const fileInput = document.getElementById('imageUpload');
+const browseButton = document.querySelector('.btn-primary'); // Assuming your button has this class
+
+browseButton.addEventListener('click', () => fileInput.click());
+
 
 fryButton.addEventListener('click', () => {
     const file = imageUpload.files[0];
