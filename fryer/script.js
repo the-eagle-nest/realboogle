@@ -47,9 +47,9 @@ function applyFilters(ctx, width, height) {
     const data = imageData.data;
 
     const fryIntensity = {
-        fried: 12, 
-        overfried: 20, 
-        burnt: 30
+        fried: 18, 
+        overfried: 25, 
+        burnt: 45
     }; 
     const intensity = fryIntensity[fryLevel.value];
 
@@ -66,8 +66,8 @@ function applyFilters(ctx, width, height) {
     }
     const brightnessFactor = {
         fried: 0.95,   // Slight dimming
-        overfried: 0.8, // More dimming
-        burnt: 0.65     // Significant dimming
+        overfried: 0.9, // More dimming
+        burnt: 0.85     // Significant dimming
     };  
     const factor = brightnessFactor[fryLevel.value];
 
@@ -81,8 +81,8 @@ function applyFilters(ctx, width, height) {
         const width = imageData.width;
         const height = imageData.height;
     
-        const waveAmplitude = intensity === 'overfried' ? 10 : 20; // Higher amplitude for more distortion
-        const waveFrequency = 1;
+        const waveAmplitude = intensity === 'overfried' ? 15 : 40; // Higher amplitude for more distortion
+        const waveFrequency = 2;
     
         for (let y = 0; y < height; y++) {
             for (let x = 0; x < width; x++) {
