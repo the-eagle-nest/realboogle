@@ -53,9 +53,9 @@ function applyFilters(ctx, width, height) {
     const data = imageData.data;
 
     const fryIntensity = {
-        fried: 12, 
-        overfried: 54, 
-        burnt: 90
+        fried: 15, 
+        overfried: 55, 
+        burnt: 140
     }; 
     const intensity = fryIntensity[fryLevel.value];
 
