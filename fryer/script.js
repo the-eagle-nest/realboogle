@@ -87,7 +87,7 @@ function applyFilters(ctx, width, height) {
         const width = imageData.width;
         const height = imageData.height;
     
-        const waveAmplitude = intensity === 'overfried' ? 25 : 9`0; // Higher amplitude for more distortion
+        const waveAmplitude = intensity === 'overfried' ? 25 : 90; // Higher amplitude for more distortion
         const waveFrequency = 4;
     
         for (let y = 0; y < height; y++) {
@@ -111,6 +111,17 @@ function applyFilters(ctx, width, height) {
                 }
             }
         }
+    }
+    // Noise Application
+    const noiseIntensity = {
+        fried: 0.02,
+        overfried: 0.1,
+        burnt: 0.8
+    };
+    const noiseLevel = noiseIntensity[fryLevel.value];
+
+    if (intensity > 0) {
+        addNoise(ctx.getImageData(0, 0, width, height), intensity);
     }
 
     ctx.putImageData(imageData, 0, 0); 
