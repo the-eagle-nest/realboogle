@@ -60,9 +60,35 @@ function applyFilters(ctx, width, height) {
         }
     }
 
-    // Distortion (optional for more 'damaged' effect)
-    if (fryLevel.value !== 'fried') {
-        applyDistortion(imageData, fryLevel.value);
+    function applyDistortion(imageData, intensity) {
+        const data = imageData.data;
+        const width = imageData.width;
+        const height = imageData.height;
+    
+        const waveAmplitude = intensity === 'overfried' ? 5 : 10; // Higher amplitude for more distortion
+        const waveFrequency = 0.05;
+    
+        for (let y = 0; y < height; y++) {
+            for (let x = 0; x < width; x++) {
+                const offsetX = waveAmplitude * Math.sin(y * waveFrequency); 
+                const offsetY = waveAmplitude * Math.sin(2 * x * waveFrequency);
+    
+                // Calculate the distorted source pixel
+                const sourceX = Math.floor(x + offsetX);
+                const sourceY = Math.floor(y + offsetY);
+    
+                // Ensure the source pixel is within image bounds
+                if (sourceX >= 0 && sourceX < width && sourceY >= 0 && sourceY < height) {
+                    const targetIndex = (y * width + x) * 4;
+                    const sourceIndex = (sourceY * width + sourceX) * 4;
+    
+                    // Copy pixel data from the distorted source 
+                    for (let i = 0; i < 4; i++) {
+                        data[targetIndex + i] = data[sourceIndex + i];
+                    }
+                }
+            }
+        }
     }
 
     ctx.putImageData(imageData, 0, 0);
