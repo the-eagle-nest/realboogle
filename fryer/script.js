@@ -112,17 +112,6 @@ function applyFilters(ctx, width, height) {
             }
         }
     }
-    // Noise Application
-    const noiseIntensity = {
-        fried: 0.02,
-        overfried: 0.1,
-        burnt: 0.8
-    };
-    const noiseLevel = noiseIntensity[fryLevel.value];
-
-    if (intensity > 0) {
-        addNoise(ctx.getImageData(0, 0, width, height), intensity);
-    }
 
     ctx.putImageData(imageData, 0, 0); 
 }
