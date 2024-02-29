@@ -39,26 +39,30 @@ function processImage(imageData) {
 
 function applyFilters(ctx, width, height) {
     const imageData = ctx.getImageData(0, 0, width, height);
-    const data = imageData.data; // Easier to work with pixel data
+    const data = imageData.data;
 
     const fryIntensity = {
-        fried: 0.4, 
-        overfried: 0.8, 
-        burnt: 1.2 
+        fried: 0.6, 
+        overfried: 1.2, 
+        burnt: 1.8 
     }; 
     const intensity = fryIntensity[fryLevel.value];
 
-    for (let i = 0; i < data.length; i += 4) { // Process R,G,B,A
-        // Contrast boost - simple sigmoid-like curve
+    // Contrast and Color Reduction
+    for (let i = 0; i < data.length; i += 4) {
         for (let j = 0; j < 3; j++) {
+            // Aggressive contrast boost
             data[i + j] = 255 / (1 + Math.exp(-intensity * (data[i + j] / 255 - 0.5)));
+
+            // Color reduction (posterization-like)
+            let posterizeLevels = fryLevel.value === 'burnt' ? 16 : 32; 
+            data[i + j] = Math.floor(data[i + j] / (256 / posterizeLevels)) * (256 / posterizeLevels); 
         }
     }
 
-    // Simulated JPEG compression for 'overfried' and 'burnt'
+    // Distortion (optional for more 'damaged' effect)
     if (fryLevel.value !== 'fried') {
-        let blockSize = fryLevel.value === 'overfried' ? 16 : 8;
-        compressImage(data, width, height, blockSize);
+        applyDistortion(imageData, fryLevel.value);
     }
 
     ctx.putImageData(imageData, 0, 0);
