@@ -14,7 +14,7 @@
 }
 
 .title {
-    font-size: 3.5em;
+    font-size: 4em;
     margin-bottom: 15px;
 }
 
@@ -22,7 +22,7 @@
     margin-top: 20px;
 }
 .version {
-    font-size: 1em;
+    font-size: 1.5em;
 }
 select {
 	width: 300px;
@@ -32,8 +32,10 @@ select {
 <body>
     <span class="title">The Image Deep Fryer</span><span class="version">v.5.1.9</span>
     <br>
+    <img style="width: 100%;" src="./fry it.png">
+    <br>
     <h4>May take up to 30 Seconds depending on File Size</h4>
-    <button class="btn btn-primary">Browse</button>
+    <button class="btn btn-primary">Browse Files</button>
     <input style="display: none;" type="file" id="imageUpload" accept="image/*" />
 
     <select id="fryLevel">
@@ -41,15 +43,16 @@ select {
         <option value="overfried">Over Deep Fried</option>
         <option value="burnt">Left In the Deep Fryer Over Night (BURNT)</option>
     </select>
-
-    <button class="btn" id="fryButton">Fry It!</button>
+        <br>
+    <button class="btn btn-large" id="fryButton">Fry It!</button>
 
     <div id="result" style="display: none;">
         <div class="alert alert-success">
-            <h2>Your Fried Image</h2>
+            <h3>Your Fried Image</h3>
           </div>
         <img id="friedImage" alt="Deep Fried Image" />
-        <a id="downloadLink" download="fried_image.jpg">Download</a>
+        <br>
+        <button style="font-size: 0.8em;" id="downloadLink" class="btn btn-success" download="fried_image.jpg">Download</button>
     </div>
 
     <script src="script.js"></script>

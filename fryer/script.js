@@ -9,19 +9,18 @@ const browseButton = document.querySelector('.btn-primary'); // Assuming your bu
 
 browseButton.addEventListener('click', () => fileInput.click());
 
-
 fryButton.addEventListener('click', () => {
     const file = imageUpload.files[0];
     if (file) {
         const reader = new FileReader();
         reader.onload = function (e) {
-            processImage(e.target.result);
+            processImage(e.target.result, file.name); // Pass in the filename
         };
         reader.readAsDataURL(file);
     }
 });
 
-function processImage(imageData) {
+function processImage(imageData, filename) { // Add filename as a parameter
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
 
@@ -33,12 +32,19 @@ function processImage(imageData) {
 
         applyFilters(ctx, canvas.width, canvas.height);
 
-        friedImage.src = canvas.toDataURL('image/jpeg', 0.5); // Adjust JPEG quality here
+        // Construct the new download filename
+        const nameParts = filename.split('.');
+        const fileExt = nameParts.pop(); 
+        const newFilename = `${nameParts.join('.')}_${fryLevel.value}.${fileExt}`;
+
+        friedImage.src = canvas.toDataURL('image/jpeg', 0.5); 
         downloadLink.href = friedImage.src;
+        downloadLink.download = newFilename; // Set the download filename
         result.style.display = 'block';
     }
-    img.src = imageData;
+    img.src = imageData;    
 }
+
 
 
 
@@ -66,8 +72,8 @@ function applyFilters(ctx, width, height) {
     }
     const brightnessFactor = {
         fried: 0.95,   // Slight dimming
-        overfried: 0.9, // More dimming
-        burnt: 0.85     // Significant dimming
+        overfried: 0.92, // More dimming
+        burnt: 0.88    // Significant dimming
     };  
     const factor = brightnessFactor[fryLevel.value];
 
@@ -81,8 +87,8 @@ function applyFilters(ctx, width, height) {
         const width = imageData.width;
         const height = imageData.height;
     
-        const waveAmplitude = intensity === 'overfried' ? 15 : 40; // Higher amplitude for more distortion
-        const waveFrequency = 2;
+        const waveAmplitude = intensity === 'overfried' ? 25 : 90; // Higher amplitude for more distortion
+        const waveFrequency = 4;
     
         for (let y = 0; y < height; y++) {
             for (let x = 0; x < width; x++) {
@@ -104,6 +110,30 @@ function applyFilters(ctx, width, height) {
                     }
                 }
             }
+        }
+    }
+    // Noise Application
+    const noiseIntensity = {
+        fried: 0.02,
+        overfried: 0.1,
+        burnt: 0.8
+    };
+    const intensity = noiseIntensity[fryLevel.value];
+
+    if (intensity > 0) {
+        addNoise(ctx.getImageData(0, 0, width, height), intensity);
+    }
+
+    ctx.putImageData(imageData, 0, 0); 
+}
+
+function addNoise(imageData, intensity) {
+    const data = imageData.data;
+
+    for (let i = 0; i < data.length; i += 4) {
+        for (let j = 0; j < 3; j++) { // For each color channel
+            const noiseValue = (Math.random() - 0.5) * 128 * intensity; 
+            data[i + j] = Math.min(255, Math.max(0, data[i + j] + noiseValue));  // Clamp to 0-255
         }
     }
 
