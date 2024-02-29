@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Image Deep Fryer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="./bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+<body>
+    <h1>The Image Deep Fryer</h1>
+
+    <input type="file" id="imageUpload" accept="image/*" />
+
+    <select id="fryLevel">
+        <option value="fried">Deep Fried</option>
+        <option value="overfried">Over Deep Fried</option>
+        <option value="burnt">Left In the Deep Fryer Over Night (BURNT)</option>
+    </select>
+
+    <button id="fryButton">Fry It!</button>
+
+    <div id="result" style="display: none;">
+        <h2>Your Fried Image</h2>
+        <img id="friedImage" alt="Deep Fried Image" />
+        <a id="downloadLink" download="fried_image.jpg">Download</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
