@@ -57,7 +57,7 @@ function applyFilters(ctx, width, height) {
         overfried: 35, 
         burnt: 70
     }; 
-    intensity = fryIntensity[fryLevel.value];
+    const intensity = fryIntensity[fryLevel.value];
 
     // Contrast and Color Reduction
     for (let i = 0; i < data.length; i += 4) {
@@ -118,7 +118,7 @@ function applyFilters(ctx, width, height) {
         overfried: 0.1,
         burnt: 0.8
     };
-    const intensity = noiseIntensity[fryLevel.value];
+    const noiseLevel = noiseIntensity[fryLevel.value];
 
     if (intensity > 0) {
         addNoise(ctx.getImageData(0, 0, width, height), intensity);
