@@ -57,7 +57,7 @@ function applyFilters(ctx, width, height) {
         overfried: 35, 
         burnt: 70
     }; 
-    const intensity = fryIntensity[fryLevel.value];
+    intensity = fryIntensity[fryLevel.value];
 
     // Contrast and Color Reduction
     for (let i = 0; i < data.length; i += 4) {
