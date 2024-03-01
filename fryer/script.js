@@ -153,6 +153,7 @@ function applyFilters(ctx, width, height) {
                 }
             }
         }
+        updateProgressBar(10);
     }
 
     ctx.putImageData(imageData, 0, 0); 
@@ -167,7 +168,7 @@ function addNoise(imageData, intensity) {
             data[i + j] = Math.min(255, Math.max(0, data[i + j] + noiseValue));  // Clamp to 0-255
         }
     }
-
+    updateProgressBar(20);
     ctx.putImageData(imageData, 0, 0);
 }
 
@@ -177,6 +178,7 @@ function compressImage(data, width, height, blockSize) {
             compressBlock(data, width, x, y, blockSize);
         }
     }
+    updateProgressBar(20);
 }
 
 function compressBlock(data, width, x, y, blockSize) {
@@ -224,6 +226,6 @@ function addNoise(imageData, intensity) {
       data[i + j] = Math.min(255, Math.max(0, data[i + j] + noiseValue));  
     }
   }
-  updateProgressBar(60);
+  updateProgressBar(10);
   ctx.putImageData(imageData, 0, 0);
 }
