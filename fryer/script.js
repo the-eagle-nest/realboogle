@@ -56,8 +56,7 @@ function processImage(imageData, filename) {
             downloadLink.download = newFilename; 
             result.style.display = 'block';
             console.log(friedImage.src); 
-        }, 1000); // A 1-second delay 
-        updateProgressBar(10);
+        }, 200); // A 1-second delay 
         applyFilters(ctx, canvas.width, canvas.height); 
     };
     img.src = imageData;   
@@ -107,7 +106,7 @@ function applyFilters(ctx, width, height) {
         let posterizeLevels = fryLevel.value === 'burnt' ? 16 : (fryLevel.value === 'caught-on-fire' ? 8 : 32); 
         data[i + j] = Math.floor(data[i + j] / (256 / posterizeLevels)) * (256 / posterizeLevels); 
       }
-      updateProgressBar(30);
+      updateProgressBar(40);
     }
   
     const brightnessFactor = {
