@@ -111,7 +111,7 @@ function applyFilters(ctx, width, height) {
         let posterizeLevels = fryLevel.value === 'burnt' ? 16 : (fryLevel.value === 'caught-on-fire' ? 8 : 32); 
         data[i + j] = Math.floor(data[i + j] / (256 / posterizeLevels)) * (256 / posterizeLevels); 
       }
-      updateProgressBar(90);
+      updateProgressBar(30);
     }
   
     const brightnessFactor = {
@@ -228,5 +228,6 @@ function addNoise(imageData, intensity) {
       data[i + j] = Math.min(255, Math.max(0, data[i + j] + noiseValue));  
     }
   }
+  updateProgressBar(60);
   ctx.putImageData(imageData, 0, 0);
 }
