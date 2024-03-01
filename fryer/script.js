@@ -5,7 +5,6 @@ const friedImage = document.getElementById('friedImage');
 const downloadLink = document.getElementById('downloadLink');
 const result = document.getElementById('result');
 const fileInput = document.getElementById('imageUpload');
-const browseButton = document.querySelector('.btn-primary');
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 if (isSafari) {
