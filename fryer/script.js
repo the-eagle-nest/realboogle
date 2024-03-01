@@ -7,8 +7,6 @@ const downloadLink = document.getElementById('downloadLink');
 const result = document.getElementById('result');
 const fileInput = document.getElementById('imageUpload');
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-const intensity = fryIntensity["caught-on-fire"]; 
-
 
 if (isSafari) {
     const result = document.getElementById('result'); 
