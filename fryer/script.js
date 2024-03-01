@@ -7,6 +7,7 @@ const result = document.getElementById('result');
 const fileInput = document.getElementById('imageUpload');
 const browseButton = document.querySelector('.btn-primary'); // Assuming your button has this class
 
+
 browseButton.addEventListener('click', () => fileInput.click());
 
 fryButton.addEventListener('click', () => {
@@ -39,8 +40,12 @@ function processImage(imageData, filename) { // Add filename as a parameter
 
         friedImage.src = canvas.toDataURL('image/jpeg', 0.5); 
         downloadLink.href = friedImage.src;
-        downloadLink.download = newFilename; // Set the download filename
+        downloadLink.download = newFilename; 
         result.style.display = 'block';
+
+        setTimeout(() => {
+        console.log("Download link attributes set!"); 
+        }, 1000); // 1-second delay
     }
     img.src = imageData;    
 }

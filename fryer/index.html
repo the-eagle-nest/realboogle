@@ -7,7 +7,7 @@
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="./bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     <style>
-        body {
+body {
     text-align: center;
     margin: 20px;
 }
@@ -53,18 +53,16 @@ select {
     <h4>May take up to 30 Seconds depending on File Size</h4>
     <button class="btn btn-primary" style="margin-left: 10px;"><i class="icon-folder-open"></i> Browse Files</button>
     <input style="display: none;" type="file" id="imageUpload" accept="image/*" />
-
-    <select id="fryLevel">
+ <select id="fryLevel">
         <option value="fried">Deep Fried</option>
         <option value="overfried">Over Deep Fried</option>
         <option value="burnt">Left In the Deep Fryer Over Night (BURNT)</option>
     </select>
         <br>
     <button class="btn btn-large" id="fryButton">Fry It!</button>
-
     <div id="result" style="display: none;">
         <div class="alert alert-success">
-            <h3>You Successfully Deep Fried you Picture!</h3>
+            <h3>You Successfully Deep Fried your Picture!</h3>
           <button id="downloadLink" class="btn btn-success" download="fried_image.jpg"><i class="icon-download-alt"></i> Download!</button>
           </div>
         <img id="friedImage" alt="Deep Fried Image" />
