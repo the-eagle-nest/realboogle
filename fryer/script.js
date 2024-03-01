@@ -37,15 +37,12 @@ function processImage(imageData, filename) { // Add filename as a parameter
         const nameParts = filename.split('.');
         const fileExt = nameParts.pop(); 
         const newFilename = `${nameParts.join('.')}_${fryLevel.value}.${fileExt}`;
-
-        friedImage.src = canvas.toDataURL('image/jpeg', 0.5); 
-        downloadLink.href = friedImage.src;
-        downloadLink.download = newFilename; 
-        result.style.display = 'block';
-
         setTimeout(() => {
-        console.log("Download link attributes set!"); 
-        }, 1000); // 1-second delay
+            friedImage.src = canvas.toDataURL('image/jpeg', 0.5); 
+            downloadLink.href = friedImage.src;
+            downloadLink.download = newFilename; // Construct the new download filename (check this closely!)
+            result.style.display = 'block';
+        }, 2000); // A 2-second delay 
     }
     img.src = imageData;    
 }
