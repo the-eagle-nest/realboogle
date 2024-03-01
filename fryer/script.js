@@ -32,6 +32,8 @@ fryButton.addEventListener('click', () => {
     reader.readAsDataURL(file);
   
   }
+  showProgressBar();
+  processImage(imageData, filename);  
 });
 
 function processImage(imageData, filename) { 
@@ -45,6 +47,7 @@ function processImage(imageData, filename) {
         canvas.height = img.height;
         ctx.drawImage(img, 0, 0);
         try {
+          updateProgressBar(10);
           applyFilters(ctx, canvas.width, canvas.height); 
       } catch (error) {
           console.error("Error in image processing:", error);
@@ -64,6 +67,26 @@ function processImage(imageData, filename) {
     img.src = imageData;   
 }
 
+function updateProgressBar(increment) {
+  const loadingBar = document.getElementById('loading-bar');
+  let progress = parseInt(loadingBar.style.width, 10) || 0; // Get current progress
+  progress += increment;
+  progress = Math.min(progress, 100); 
+
+  loadingBar.style.width = `${progress}%`;
+
+  if (progress === 100) { 
+      hideProgressBar();
+  }
+}
+
+function showProgressBar() {
+  document.getElementById('loading-container').style.display = 'block'; 
+}
+
+function hideProgressBar() {
+  document.getElementById('loading-container').style.display = 'none'; 
+}
 
 function applyFilters(ctx, width, height) {
     console.log("Entered applyFilters");
