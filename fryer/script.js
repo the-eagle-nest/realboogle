@@ -1,1 +1,182 @@
-const imageUpload=document.getElementById("imageUpload"),fryLevel=document.getElementById("fryLevel"),fryButton=document.getElementById("fryButton"),friedImage=document.getElementById("friedImage"),downloadLink=document.getElementById("downloadLink"),result=document.getElementById("result"),fileInput=document.getElementById("imageUpload"),isSafari=/^((?!chrome|android).)*safari/i.test(navigator.userAgent);if(isSafari){let e=document.getElementById("result");e.innerHTML="<h2>Safari is not fully supported yet.</h2> <p>Please use a desktop browser or try Chrome, Firefox, or Edge for the best experience.</p>",e.style.display="block"}const browseButton=document.querySelector(".btn-primary");function processImage(e,t){console.log("Entered processImage");let l=document.createElement("canvas"),o=l.getContext("2d"),r=new Image;r.onload=()=>{l.width=r.width,l.height=r.height,o.drawImage(r,0,0);let e=t.split("."),n=e.pop(),a=`${e.join(".")}_${fryLevel.value}.${n}`;setTimeout(()=>{friedImage.src=l.toDataURL("image/jpeg",.5),downloadLink.href=friedImage.src,downloadLink.download=a,result.style.display="block",console.log(friedImage.src)},200),applyFilters(o,l.width,l.height)},r.src=e}function applyFilters(e,t,l){console.log("Entered applyFilters");let o=e.getImageData(0,0,t,l),r=o.data,n={fried:10,overfried:20,burnt:145,"caught-on-fire":300}[fryLevel.value];for(let a=0;a<r.length;a+=4)for(let i=0;i<3;i++){r[a+i]=255/(1+Math.exp(-n*(r[a+i]/255-.5)));let d="burnt"===fryLevel.value?16:"caught-on-fire"===fryLevel.value?8:32;r[a+i]=Math.floor(r[a+i]/(256/d))*(256/d)}let f={fried:.97,overfried:.96,burnt:.95,"caught-on-fire":.94}[fryLevel.value];for(let s=0;s<r.length;s+=4)for(let g=0;g<3;g++)r[s+g]*=f;function $(e,t){let l=e.data,o=e.width,r=e.height,n="overfried"===t?175:340;for(let a=0;a<r;a++)for(let i=0;i<o;i++){let d=n*Math.sin(100*a),f=n*Math.sin(2*i*100),s=Math.floor(i+d),g=Math.floor(a+f);if(s>=0&&s<o&&g>=0&&g<r){let $=(a*o+i)*4,c=(g*o+s)*4;for(let u=0;u<4;u++)l[$+u]=l[c+u]}}}e.putImageData(o,0,0)}function compressImage(e,t,l,o){for(let r=0;r<l;r+=o)for(let n=0;n<t;n+=o)compressBlock(e,t,n,r,o)}function compressBlock(e,t,l,o,r){let n=0,a=0,i=0,d=0;for(let f=0;f<r;f++)for(let s=0;s<r;s++){let g=(t*(o+f)+(l+s))*4;n+=e[g],a+=e[g+1],i+=e[g+2],d++}n=Math.floor(n/d),a=Math.floor(a/d),i=Math.floor(i/d);for(let $=0;$<r;$++)for(let c=0;c<r;c++){let u=(t*(o+$)+(l+c))*4;e[u]=n,e[u+1]=a,e[u+2]=i}ctx.putImageData(imageData,0,0)}browseButton.addEventListener("click",()=>fileInput.click()),fryButton.addEventListener("click",()=>{console.log("Fry button clicked");let e=imageUpload.files[0];if(e){console.log("File selected");let t=new FileReader;t.onload=function(t){let o=t.target.result;l(),processImage(o,e.name)},t.readAsDataURL(e)}function l(){document.getElementById("loading-container").style.display="block"}function o(){document.getElementById("loading-container").style.display="none"}}),hideProgressBar();
+const imageUpload = document.getElementById('imageUpload');
+const fryLevel = document.getElementById('fryLevel');
+const fryButton = document.getElementById('fryButton');
+const friedImage = document.getElementById('friedImage');
+const downloadLink = document.getElementById('downloadLink');
+const result = document.getElementById('result');
+const fileInput = document.getElementById('imageUpload');
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+if (isSafari) {
+    const result = document.getElementById('result'); 
+    result.innerHTML = `<h2>Safari is not fully supported yet.</h2> <p>Please use a desktop browser or try Chrome, Firefox, or Edge for the best experience.</p>`;
+    result.style.display = 'block'; // Show the message
+}
+
+const browseButton = document.querySelector('.btn-primary');
+
+browseButton.addEventListener('click', () => fileInput.click());
+
+fryButton.addEventListener('click', () => {
+  console.log("Fry button clicked");
+  const file = imageUpload.files[0];
+  if (file) {
+    console.log("File selected");
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const imageData = e.target.result;
+      showProgressBar(); 
+      processImage(imageData, file.name); 
+    };
+    reader.readAsDataURL(file);
+  }
+
+
+function showProgressBar() {
+    document.getElementById('loading-container').style.display = 'block'; 
+}
+
+function hideProgressBar() {
+    document.getElementById('loading-container').style.display = 'none'; 
+}
+
+});
+
+function processImage(imageData, filename) { 
+    console.log("Entered processImage");
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    const img = new Image();
+
+    img.onload = () => {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        ctx.drawImage(img, 0, 0);
+        // Construct the new download filename
+        const nameParts = filename.split('.');
+        const fileExt = nameParts.pop(); 
+        const newFilename = `${nameParts.join('.')}_${fryLevel.value}.${fileExt}`;
+        setTimeout(() => {
+            friedImage.src = canvas.toDataURL('image/jpeg', 0.5); 
+            downloadLink.href = friedImage.src;
+            downloadLink.download = newFilename; 
+            result.style.display = 'block';
+            console.log(friedImage.src); 
+        }, 200); // A 1-second delay 
+        applyFilters(ctx, canvas.width, canvas.height); 
+    };
+    img.src = imageData;   
+}
+
+
+function applyFilters(ctx, width, height) {
+    console.log("Entered applyFilters");
+    const imageData = ctx.getImageData(0, 0, width, height);
+    const data = imageData.data;
+  
+    const fryIntensity = {
+      fried: 10, 
+      overfried: 20, 
+      burnt: 145,
+      "caught-on-fire": 300 
+    }; 
+    const intensity = fryIntensity[fryLevel.value];
+  
+    // Contrast and Color Reduction
+    for (let i = 0; i < data.length; i += 4) {
+      for (let j = 0; j < 3; j++) {
+        // Aggressive contrast boost
+        data[i + j] = 255 / (1 + Math.exp(-intensity * (data[i + j] / 255 - 0.5)));
+  
+        // Color reduction (posterization-like)
+        let posterizeLevels = fryLevel.value === 'burnt' ? 16 : (fryLevel.value === 'caught-on-fire' ? 8 : 32); 
+        data[i + j] = Math.floor(data[i + j] / (256 / posterizeLevels)) * (256 / posterizeLevels); 
+      }
+    }
+  
+    const brightnessFactor = {
+      fried: 0.97, 
+      overfried: 0.96,
+      burnt: 0.95,  
+      "caught-on-fire": 0.94 // Even darker
+    }; 
+    const factor = brightnessFactor[fryLevel.value];
+  
+    for (let i = 0; i < data.length; i += 4) {
+      for (let j = 0; j < 3; j++) {
+        data[i + j] *= factor; 
+      }
+    }
+  
+    function applyDistortion(imageData, intensity) {
+        const data = imageData.data;
+        const width = imageData.width;
+        const height = imageData.height;
+    
+        const waveAmplitude = intensity === 'overfried' ? 175 : 340; // Higher amplitude for more distortion
+        const waveFrequency = 100;
+    
+        for (let y = 0; y < height; y++) {
+            for (let x = 0; x < width; x++) {
+                const offsetX = waveAmplitude * Math.sin(y * waveFrequency); 
+                const offsetY = waveAmplitude * Math.sin(2 * x * waveFrequency);
+    
+                // Calculate the distorted source pixel
+                const sourceX = Math.floor(x + offsetX);
+                const sourceY = Math.floor(y + offsetY);
+    
+                // Ensure the source pixel is within image bounds
+                if (sourceX >= 0 && sourceX < width && sourceY >= 0 && sourceY < height) {
+                    const targetIndex = (y * width + x) * 4;
+                    const sourceIndex = (sourceY * width + sourceX) * 4;
+    
+                    // Copy pixel data from the distorted source 
+                    for (let i = 0; i < 4; i++) {
+                        data[targetIndex + i] = data[sourceIndex + i];
+                    }
+                }
+            }
+        }
+        hideProgressBar();
+    }
+
+    ctx.putImageData(imageData, 0, 0); 
+}
+
+function compressImage(data, width, height, blockSize) {
+    for (let y = 0; y < height; y += blockSize) {
+        for (let x = 0; x < width; x += blockSize) {
+            compressBlock(data, width, x, y, blockSize);
+        }
+    }
+}
+hideProgressBar();
+function compressBlock(data, width, x, y, blockSize) {
+    let avgR = 0, avgG = 0, avgB = 0;
+    let count = 0;
+
+    for (let by = 0; by < blockSize; by++) {
+        for (let bx = 0; bx < blockSize; bx++) {
+            let index = (width * (y + by) + (x + bx)) * 4;
+            avgR += data[index];
+            avgG += data[index + 1];
+            avgB += data[index + 2];
+            count++;
+        }
+    }
+
+    avgR = Math.floor(avgR / count);
+    avgG = Math.floor(avgG / count);
+    avgB = Math.floor(avgB / count);
+
+    // Fill the block with average color
+    for (let by = 0; by < blockSize; by++) {
+        for (let bx = 0; bx < blockSize; bx++) {
+            let index = (width * (y + by) + (x + bx)) * 4;
+            data[index] = avgR;
+            data[index + 1] = avgG;
+            data[index + 2] = avgB;
+        }
+    }
+  ctx.putImageData(imageData, 0, 0);
+}
