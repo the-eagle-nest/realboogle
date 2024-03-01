@@ -35,6 +35,7 @@ function processImage(imageData, filename) { // Add filename as a parameter
             downloadLink.href = friedImage.src;
             downloadLink.download = newFilename; // Construct the new download filename (check this closely!)
             result.style.display = 'block';
+            console.log(friedImage.src); 
         }, 2000); // A 2-second delay 
     }
     img.src = imageData;    
