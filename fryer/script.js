@@ -15,6 +15,40 @@ if (isSafari) {
 
 
 
+
+const browseButton = document.querySelector('.btn-primary'); // Assuming your button has this class
+
+browseButton.addEventListener('click', () => fileInput.click());
+
+fryButton.addEventListener('click', () => {
+  const file = imageUpload.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      processImage(e.target.result, file.name); // Pass in the filename
+    };
+    reader.readAsDataURL(file);
+     // Show the loading bar
+     const loadingContainer = document.getElementById('loading-container');
+     loadingContainer.style.display = 'block'; 
+ 
+     const loadingBar = document.getElementById('loading-bar');
+ 
+     // Define updateProgress in the outer scope
+     function updateProgress(increment) {
+         let progress = 0; // Move progress variable outside 
+         progress += increment;
+         progress = Math.min(progress, 100); 
+         loadingBar.style.width = `${progress}%`;
+         
+         if (progress === 100) { 
+             loadingContainer.style.display = 'none'; 
+         }
+     }
+  }
+});
+
+
 function processImage(imageData, filename) { // Add filename as a parameter
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
@@ -41,42 +75,9 @@ function processImage(imageData, filename) { // Add filename as a parameter
     }
     img.src = imageData;   
     img.onload = () => {
-        // ... other actions within 'onload' ... 
         updateProgress(10); // Update after image load
     } 
 }
-
-
-const browseButton = document.querySelector('.btn-primary'); // Assuming your button has this class
-
-browseButton.addEventListener('click', () => fileInput.click());
-
-fryButton.addEventListener('click', () => {
-  const file = imageUpload.files[0];
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      processImage(e.target.result, file.name); // Pass in the filename
-    };
-    reader.readAsDataURL(file);
-    const loadingContainer = document.getElementById('loading-container');
-    loadingContainer.style.display = 'block'; 
-
-    const loadingBar = document.getElementById('loading-bar');
-    let progress = 0; 
-
-    // Update progress within each major image processing step 
-    function updateProgress(increment) {
-        progress += increment;
-        progress = Math.min(progress, 100); // Ensure progress never exceeds 100
-        loadingBar.style.width = `${progress}%`;
-        
-        if (progress === 100) { 
-            loadingContainer.style.display = 'none'; // Hide at completion
-        }
-    }
-  }
-});
 
 
 function applyFilters(ctx, width, height) {
