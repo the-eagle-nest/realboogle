@@ -5,7 +5,6 @@ const friedImage = document.getElementById('friedImage');
 const downloadLink = document.getElementById('downloadLink');
 const result = document.getElementById('result');
 const fileInput = document.getElementById('imageUpload');
-const browseButton = document.querySelector('.btn-primary');
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 const intensity = fryIntensity["caught-on-fire"]; 
 
@@ -44,19 +43,21 @@ function processImage(imageData, filename) { // Add filename as a parameter
 }
 
 
+const browseButton = document.querySelector('.btn-primary'); // Assuming your button has this class
 
 browseButton.addEventListener('click', () => fileInput.click());
 
 fryButton.addEventListener('click', () => {
-    const file = imageUpload.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function (e) {
-            processImage(e.target.result, file.name); // Pass in the filename
-        };
-        reader.readAsDataURL(file);
-    }
+  const file = imageUpload.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      processImage(e.target.result, file.name); // Pass in the filename
+    };
+    reader.readAsDataURL(file);
+  }
 });
+
 
 function applyFilters(ctx, width, height) {
     const imageData = ctx.getImageData(0, 0, width, height);
