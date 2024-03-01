@@ -6,6 +6,13 @@ const downloadLink = document.getElementById('downloadLink');
 const result = document.getElementById('result');
 const fileInput = document.getElementById('imageUpload');
 const browseButton = document.querySelector('.btn-primary'); // Assuming your button has this class
+const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+if (isSafari) {
+    const result = document.getElementById('result'); 
+    result.innerHTML = `<h2>Safari is not fully supported yet.</h2> <p>Please use a desktop browser or try Chrome, Firefox, or Edge for the best experience.</p>`;
+    result.style.display = 'block'; // Show the message
+}
 
 
 browseButton.addEventListener('click', () => fileInput.click());
@@ -20,35 +27,6 @@ fryButton.addEventListener('click', () => {
         reader.readAsDataURL(file);
     }
 });
-
-function processImage(imageData, filename) { // Add filename as a parameter
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-
-    const img = new Image();
-    img.onload = () => {
-        canvas.width = img.width;
-        canvas.height = img.height;
-        ctx.drawImage(img, 0, 0);
-
-        applyFilters(ctx, canvas.width, canvas.height);
-
-        // Construct the new download filename
-        const nameParts = filename.split('.');
-        const fileExt = nameParts.pop(); 
-        const newFilename = `${nameParts.join('.')}_${fryLevel.value}.${fileExt}`;
-        setTimeout(() => {
-            friedImage.src = canvas.toDataURL('image/jpeg', 0.5); 
-            downloadLink.href = friedImage.src;
-            downloadLink.download = newFilename; // Construct the new download filename (check this closely!)
-            result.style.display = 'block';
-        }, 2000); // A 2-second delay 
-    }
-    img.src = imageData;    
-}
-
-
-
 
 function applyFilters(ctx, width, height) {
     const imageData = ctx.getImageData(0, 0, width, height);
@@ -166,5 +144,31 @@ function compressBlock(data, width, x, y, blockSize) {
             data[index + 2] = avgB;
         }
     }
+}
+
+function processImage(imageData, filename) { // Add filename as a parameter
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const img = new Image();
+    img.onload = () => {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        ctx.drawImage(img, 0, 0);
+
+        applyFilters(ctx, canvas.width, canvas.height);
+
+        // Construct the new download filename
+        const nameParts = filename.split('.');
+        const fileExt = nameParts.pop(); 
+        const newFilename = `${nameParts.join('.')}_${fryLevel.value}.${fileExt}`;
+        setTimeout(() => {
+            friedImage.src = canvas.toDataURL('image/jpeg', 0.5); 
+            downloadLink.href = friedImage.src;
+            downloadLink.download = newFilename; // Construct the new download filename (check this closely!)
+            result.style.display = 'block';
+        }, 2000); // A 2-second delay 
+    }
+    img.src = imageData;    
 }
 
