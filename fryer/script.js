@@ -62,7 +62,7 @@ function applyFilters(ctx, width, height) {
 
     const fryIntensity = {
         fried: 15, 
-        overfried: 50, 
+        overfried: 40, 
         burnt: 145
     }; 
     const intensity = fryIntensity[fryLevel.value];
