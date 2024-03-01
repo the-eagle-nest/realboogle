@@ -83,9 +83,6 @@ function processImage(imageData, filename, updateProgress) {
         }, 2000); // A 2-second delay 
     }
     img.src = imageData;   
-    img.onload = () => {
-      updateProgress(10); 
-  }
 }
 
 
@@ -112,7 +109,6 @@ function applyFilters(ctx, width, height) {
         let posterizeLevels = fryLevel.value === 'burnt' ? 16 : (fryLevel.value === 'caught-on-fire' ? 8 : 32); 
         data[i + j] = Math.floor(data[i + j] / (256 / posterizeLevels)) * (256 / posterizeLevels); 
       }
-    updateProgress(20);
     }
   
     const brightnessFactor = {
@@ -158,7 +154,6 @@ function applyFilters(ctx, width, height) {
                 }
             }
         }
-    updateProgress(30);
     }
 
     ctx.putImageData(imageData, 0, 0); 
@@ -230,6 +225,5 @@ function addNoise(imageData, intensity) {
       data[i + j] = Math.min(255, Math.max(0, data[i + j] + noiseValue));  
     }
   }
-  updateProgress(20);
   ctx.putImageData(imageData, 0, 0);
 }
