@@ -83,9 +83,9 @@ function applyFilters(ctx, width, height) {
   
     const brightnessFactor = {
       fried: 0.97, 
-      overfried: 0.93,
-      burnt: 0.9,  
-      "caught-on-fire": 0.88 // Even darker
+      overfried: 0.94,
+      burnt: 0.91,  
+      "caught-on-fire": 0.9 // Even darker
     }; 
     const factor = brightnessFactor[fryLevel.value];
   
@@ -177,5 +177,24 @@ function compressBlock(data, width, x, y, blockSize) {
             data[index + 2] = avgB;
         }
     }
+    
+if (fryLevel.value === 'burnt' || fryLevel.value === 'caught-on-fire') {
+    const noiseIntensity = fryLevel.value === 'caught-on-fire' ? 1.5 : 1; // More noise for 'caught-on-fire'
+    addNoise(imageData, noiseIntensity);
+  }
+
+  ctx.putImageData(imageData, 0, 0); 
 }
 
+function addNoise(imageData, intensity) {
+  const data = imageData.data;
+
+  for (let i = 0; i < data.length; i += 4) {
+    for (let j = 0; j < 3; j++) { // For each color channel
+      const noiseValue = (Math.random() - 0.5) * 128 * intensity; 
+      data[i + j] = Math.min(255, Math.max(0, data[i + j] + noiseValue));  
+    }
+  }
+
+  ctx.putImageData(imageData, 0, 0);
+}
