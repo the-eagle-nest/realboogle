@@ -65,9 +65,11 @@ function processImage(imageData, filename, updateProgress) {
         canvas.width = img.width;
         canvas.height = img.height;
         ctx.drawImage(img, 0, 0);
-
-        applyFilters(ctx, canvas.width, canvas.height);
-
+        try {
+          applyFilters(ctx, canvas.width, canvas.height); 
+      } catch (error) {
+          console.error("Error in image processing:", error);
+      }  
         // Construct the new download filename
         const nameParts = filename.split('.');
         const fileExt = nameParts.pop(); 
