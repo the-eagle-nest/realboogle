@@ -30,32 +30,11 @@ fryButton.addEventListener('click', () => {
       processImage(e.target.result, file.name);
     };
     reader.readAsDataURL(file);
-     // Show the loading bar
-     const loadingContainer = document.getElementById('loading-container');
-     loadingContainer.style.display = 'block'; 
- 
-     const loadingBar = document.getElementById('loading-bar');
- 
-     // Define updateProgress in the outer scope
-     function updateProgress(increment) {
-         let progress = 0; // Move progress variable outside 
-         progress += increment;
-         progress = Math.min(progress, 100); 
-         loadingBar.style.width = `${progress}%`;
-         
-         if (progress === 100) { 
-             loadingContainer.style.display = 'none'; 
-         }
-         console.log("Progress:", progress);
-     }
-     reader.onload = function (e) {
-      processImage(e.target.result, file.name, updateProgress); 
-  };
   
   }
 });
 
-function processImage(imageData, filename, updateProgress) { 
+function processImage(imageData, filename) { 
     console.log("Entered processImage");
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
