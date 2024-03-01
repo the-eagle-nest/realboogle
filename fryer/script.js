@@ -2,6 +2,7 @@ const imageUpload = document.getElementById('imageUpload');
 const fryLevel = document.getElementById('fryLevel');
 const fryButton = document.getElementById('fryButton');
 const friedImage = document.getElementById('friedImage');
+const intensity = fryIntensity[fryLevel.value]; 
 const downloadLink = document.getElementById('downloadLink');
 const result = document.getElementById('result');
 const fileInput = document.getElementById('imageUpload');
