@@ -88,6 +88,7 @@ function processImage(imageData, filename, updateProgress) {
 
 
 function applyFilters(ctx, width, height) {
+    console.log("Entered applyFilters");
     const imageData = ctx.getImageData(0, 0, width, height);
     const data = imageData.data;
   
