@@ -62,10 +62,10 @@ function applyFilters(ctx, width, height) {
     const data = imageData.data;
   
     const fryIntensity = {
-      fried: 15, 
-      overfried: 40, 
+      fried: 10, 
+      overfried: 20, 
       burnt: 145,
-      "caught-on-fire": 290 // Double the intensity of 'burnt'
+      "caught-on-fire": 300 // Double the intensity of 'burnt'
     }; 
     const intensity = fryIntensity[fryLevel.value];
   
@@ -83,9 +83,9 @@ function applyFilters(ctx, width, height) {
   
     const brightnessFactor = {
       fried: 0.97, 
-      overfried: 0.94,
-      burnt: 0.91,  
-      "caught-on-fire": 0.9 // Even darker
+      overfried: 0.96,
+      burnt: 0.95,  
+      "caught-on-fire": 0.94 // Even darker
     }; 
     const factor = brightnessFactor[fryLevel.value];
   
@@ -100,7 +100,7 @@ function applyFilters(ctx, width, height) {
         const width = imageData.width;
         const height = imageData.height;
     
-        const waveAmplitude = intensity === 'overfried' ? 75 : 140; // Higher amplitude for more distortion
+        const waveAmplitude = intensity === 'overfried' ? 175 : 340; // Higher amplitude for more distortion
         const waveFrequency = 100;
     
         for (let y = 0; y < height; y++) {
@@ -179,7 +179,7 @@ function compressBlock(data, width, x, y, blockSize) {
     }
     
 if (fryLevel.value === 'burnt' || fryLevel.value === 'caught-on-fire') {
-    const noiseIntensity = fryLevel.value === 'caught-on-fire' ? 1.5 : 1; // More noise for 'caught-on-fire'
+    const noiseIntensity = fryLevel.value === 'caught-on-fire' ? 50 : 35; // More noise for 'caught-on-fire'
     addNoise(imageData, noiseIntensity);
   }
 
