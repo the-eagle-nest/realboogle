@@ -16,7 +16,7 @@ if (isSafari) {
 
 
 
-const browseButton = document.querySelector('.btn-primary'); // Assuming your button has this class
+const browseButton = document.querySelector('.btn-primary');
 
 browseButton.addEventListener('click', () => fileInput.click());
 
@@ -44,12 +44,16 @@ fryButton.addEventListener('click', () => {
          if (progress === 100) { 
              loadingContainer.style.display = 'none'; 
          }
+         console.log("Progress:", progress);
      }
+     reader.onload = function (e) {
+      processImage(e.target.result, file.name, updateProgress); 
+  };
+  
   }
 });
 
-
-function processImage(imageData, filename) { // Add filename as a parameter
+function processImage(imageData, filename, updateProgress) { 
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
 
@@ -75,8 +79,8 @@ function processImage(imageData, filename) { // Add filename as a parameter
     }
     img.src = imageData;   
     img.onload = () => {
-        updateProgress(10); // Update after image load
-    } 
+      updateProgress(10); // Can now access updateProgress
+  }
 }
 
 
