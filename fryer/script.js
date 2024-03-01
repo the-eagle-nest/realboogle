@@ -13,6 +13,8 @@ if (isSafari) {
     result.style.display = 'block'; // Show the message
 }
 
+
+
 function processImage(imageData, filename) { // Add filename as a parameter
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
@@ -37,7 +39,11 @@ function processImage(imageData, filename) { // Add filename as a parameter
             console.log(friedImage.src); 
         }, 2000); // A 2-second delay 
     }
-    img.src = imageData;    
+    img.src = imageData;   
+    img.onload = () => {
+        // ... other actions within 'onload' ... 
+        updateProgress(10); // Update after image load
+    } 
 }
 
 
@@ -53,6 +59,22 @@ fryButton.addEventListener('click', () => {
       processImage(e.target.result, file.name); // Pass in the filename
     };
     reader.readAsDataURL(file);
+    const loadingContainer = document.getElementById('loading-container');
+    loadingContainer.style.display = 'block'; 
+
+    const loadingBar = document.getElementById('loading-bar');
+    let progress = 0; 
+
+    // Update progress within each major image processing step 
+    function updateProgress(increment) {
+        progress += increment;
+        progress = Math.min(progress, 100); // Ensure progress never exceeds 100
+        loadingBar.style.width = `${progress}%`;
+        
+        if (progress === 100) { 
+            loadingContainer.style.display = 'none'; // Hide at completion
+        }
+    }
   }
 });
 
@@ -79,6 +101,7 @@ function applyFilters(ctx, width, height) {
         let posterizeLevels = fryLevel.value === 'burnt' ? 16 : (fryLevel.value === 'caught-on-fire' ? 8 : 32); 
         data[i + j] = Math.floor(data[i + j] / (256 / posterizeLevels)) * (256 / posterizeLevels); 
       }
+    updateProgress(20);
     }
   
     const brightnessFactor = {
@@ -124,6 +147,7 @@ function applyFilters(ctx, width, height) {
                 }
             }
         }
+    updateProgress(30);
     }
 
     ctx.putImageData(imageData, 0, 0); 
@@ -195,6 +219,6 @@ function addNoise(imageData, intensity) {
       data[i + j] = Math.min(255, Math.max(0, data[i + j] + noiseValue));  
     }
   }
-
+  updateProgress(20);
   ctx.putImageData(imageData, 0, 0);
 }
