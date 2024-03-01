@@ -14,6 +14,33 @@ if (isSafari) {
     result.style.display = 'block'; // Show the message
 }
 
+function processImage(imageData, filename) { // Add filename as a parameter
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const img = new Image();
+    img.onload = () => {
+        canvas.width = img.width;
+        canvas.height = img.height;
+        ctx.drawImage(img, 0, 0);
+
+        applyFilters(ctx, canvas.width, canvas.height);
+
+        // Construct the new download filename
+        const nameParts = filename.split('.');
+        const fileExt = nameParts.pop(); 
+        const newFilename = `${nameParts.join('.')}_${fryLevel.value}.${fileExt}`;
+        setTimeout(() => {
+            friedImage.src = canvas.toDataURL('image/jpeg', 0.5); 
+            downloadLink.href = friedImage.src;
+            downloadLink.download = newFilename; // Construct the new download filename (check this closely!)
+            result.style.display = 'block';
+        }, 2000); // A 2-second delay 
+    }
+    img.src = imageData;    
+}
+
+
 
 browseButton.addEventListener('click', () => fileInput.click());
 
@@ -144,31 +171,5 @@ function compressBlock(data, width, x, y, blockSize) {
             data[index + 2] = avgB;
         }
     }
-}
-
-function processImage(imageData, filename) { // Add filename as a parameter
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-
-    const img = new Image();
-    img.onload = () => {
-        canvas.width = img.width;
-        canvas.height = img.height;
-        ctx.drawImage(img, 0, 0);
-
-        applyFilters(ctx, canvas.width, canvas.height);
-
-        // Construct the new download filename
-        const nameParts = filename.split('.');
-        const fileExt = nameParts.pop(); 
-        const newFilename = `${nameParts.join('.')}_${fryLevel.value}.${fileExt}`;
-        setTimeout(() => {
-            friedImage.src = canvas.toDataURL('image/jpeg', 0.5); 
-            downloadLink.href = friedImage.src;
-            downloadLink.download = newFilename; // Construct the new download filename (check this closely!)
-            result.style.display = 'block';
-        }, 2000); // A 2-second delay 
-    }
-    img.src = imageData;    
 }
 
