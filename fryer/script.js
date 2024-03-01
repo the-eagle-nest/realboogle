@@ -21,11 +21,13 @@ const browseButton = document.querySelector('.btn-primary');
 browseButton.addEventListener('click', () => fileInput.click());
 
 fryButton.addEventListener('click', () => {
+  console.log("Fry button clicked");
   const file = imageUpload.files[0];
   if (file) {
+    console.log("File selected");
     const reader = new FileReader();
     reader.onload = function (e) {
-      processImage(e.target.result, file.name); // Pass in the filename
+      processImage(e.target.result, file.name);
     };
     reader.readAsDataURL(file);
      // Show the loading bar
@@ -54,6 +56,7 @@ fryButton.addEventListener('click', () => {
 });
 
 function processImage(imageData, filename, updateProgress) { 
+    console.log("Entered processImage");
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
 
@@ -72,14 +75,14 @@ function processImage(imageData, filename, updateProgress) {
         setTimeout(() => {
             friedImage.src = canvas.toDataURL('image/jpeg', 0.5); 
             downloadLink.href = friedImage.src;
-            downloadLink.download = newFilename; // Construct the new download filename (check this closely!)
+            downloadLink.download = newFilename; 
             result.style.display = 'block';
             console.log(friedImage.src); 
         }, 2000); // A 2-second delay 
     }
     img.src = imageData;   
     img.onload = () => {
-      updateProgress(10); // Can now access updateProgress
+      updateProgress(10); 
   }
 }
 
@@ -92,7 +95,7 @@ function applyFilters(ctx, width, height) {
       fried: 10, 
       overfried: 20, 
       burnt: 145,
-      "caught-on-fire": 300 // Double the intensity of 'burnt'
+      "caught-on-fire": 300 
     }; 
     const intensity = fryIntensity[fryLevel.value];
   
