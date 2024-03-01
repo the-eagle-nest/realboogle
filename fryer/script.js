@@ -27,31 +27,25 @@ fryButton.addEventListener('click', () => {
     console.log("File selected");
     const reader = new FileReader();
     reader.onload = function (e) {
-      processImage(e.target.result, file.name);
+      const imageData = e.target.result;
+      showProgressBar(); 
+      processImage(imageData, file.name); 
     };
     reader.readAsDataURL(file);
-  
   }
-  showProgressBar();
-  processImage(imageData, filename);  
+
 });
 
 function processImage(imageData, filename) { 
     console.log("Entered processImage");
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
-
     const img = new Image();
+
     img.onload = () => {
         canvas.width = img.width;
         canvas.height = img.height;
         ctx.drawImage(img, 0, 0);
-        try {
-          updateProgressBar(10);
-          applyFilters(ctx, canvas.width, canvas.height); 
-      } catch (error) {
-          console.error("Error in image processing:", error);
-      }  
         // Construct the new download filename
         const nameParts = filename.split('.');
         const fileExt = nameParts.pop(); 
@@ -62,8 +56,10 @@ function processImage(imageData, filename) {
             downloadLink.download = newFilename; 
             result.style.display = 'block';
             console.log(friedImage.src); 
-        }, 2000); // A 2-second delay 
-    }
+        }, 1000); // A 1-second delay 
+        updateProgressBar(10);
+        applyFilters(ctx, canvas.width, canvas.height); 
+    };
     img.src = imageData;   
 }
 
