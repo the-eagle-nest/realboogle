@@ -5,8 +5,10 @@ const friedImage = document.getElementById('friedImage');
 const downloadLink = document.getElementById('downloadLink');
 const result = document.getElementById('result');
 const fileInput = document.getElementById('imageUpload');
-const browseButton = document.querySelector('.btn-primary'); // Assuming your button has this class
+const browseButton = document.querySelector('.btn-primary');
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+const intensity = fryIntensity["caught-on-fire"]; 
+
 
 if (isSafari) {
     const result = document.getElementById('result'); 
@@ -59,44 +61,48 @@ fryButton.addEventListener('click', () => {
 function applyFilters(ctx, width, height) {
     const imageData = ctx.getImageData(0, 0, width, height);
     const data = imageData.data;
-
+  
     const fryIntensity = {
-        fried: 15, 
-        overfried: 40, 
-        burnt: 145
+      fried: 15, 
+      overfried: 40, 
+      burnt: 145,
+      "caught-on-fire": 290 // Double the intensity of 'burnt'
     }; 
     const intensity = fryIntensity[fryLevel.value];
-
+  
     // Contrast and Color Reduction
     for (let i = 0; i < data.length; i += 4) {
-        for (let j = 0; j < 3; j++) {
-            // Aggressive contrast boost
-            data[i + j] = 255 / (1 + Math.exp(-intensity * (data[i + j] / 255 - 0.5)));
-
-            // Color reduction (posterization-like)
-            let posterizeLevels = fryLevel.value === 'burnt' ? 16 : 32; 
-            data[i + j] = Math.floor(data[i + j] / (256 / posterizeLevels)) * (256 / posterizeLevels); 
-        }
+      for (let j = 0; j < 3; j++) {
+        // Aggressive contrast boost
+        data[i + j] = 255 / (1 + Math.exp(-intensity * (data[i + j] / 255 - 0.5)));
+  
+        // Color reduction (posterization-like)
+        let posterizeLevels = fryLevel.value === 'burnt' ? 16 : (fryLevel.value === 'caught-on-fire' ? 8 : 32); 
+        data[i + j] = Math.floor(data[i + j] / (256 / posterizeLevels)) * (256 / posterizeLevels); 
+      }
     }
+  
     const brightnessFactor = {
-        fried: 0.97,   // Slight dimming
-        overfried: 0.93, // More dimming
-        burnt: 0.9    // Significant dimming
-    };  
+      fried: 0.97, 
+      overfried: 0.93,
+      burnt: 0.9,  
+      "caught-on-fire": 0.88 // Even darker
+    }; 
     const factor = brightnessFactor[fryLevel.value];
-
+  
     for (let i = 0; i < data.length; i += 4) {
-        for (let j = 0; j < 3; j++) {
-            data[i + j] *= factor;  // Multiply each color channel
-        }
+      for (let j = 0; j < 3; j++) {
+        data[i + j] *= factor; 
+      }
     }
+  
     function applyDistortion(imageData, intensity) {
         const data = imageData.data;
         const width = imageData.width;
         const height = imageData.height;
     
         const waveAmplitude = intensity === 'overfried' ? 75 : 140; // Higher amplitude for more distortion
-        const waveFrequency = 25;
+        const waveFrequency = 100;
     
         for (let y = 0; y < height; y++) {
             for (let x = 0; x < width; x++) {
