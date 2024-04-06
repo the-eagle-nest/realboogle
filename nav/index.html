@@ -177,11 +177,14 @@ body {
       </style>
   </head>
 <body cz-shortcut-listen="true">
-  <div id="content"><!-- dynamic content is supposed to be here --><script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ef.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialFormsScript"));</script></div>
+  <div id="navbar-container"></div>
+  <div class="container">
+      </div>
+  <div id="content"><!-- dynamic content --><script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ef.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialFormsScript"));</script></div>
    <div class="container">
     <!-- FOOTER -->
     <footer>
-      <p>© <span id="copyrightYear"></span> NameNotFound&#46;Net <a href="#">Contact Us</a></p>
+      <p>© <span id="copyrightYear"></span> NameNotFound&#46;Net | Made by Ryan G <a href="#">Contact Us</a></p>
     </footer>
   </div><!-- /.container -->
   <script src="https://code.jquery.com/jquery.js"></script>
@@ -205,23 +208,23 @@ body {
                   contentDiv.innerHTML = '';
                   break;
               case 'lunch':
-                  contentDiv.innerHTML = ' <div class="navbar-wrapper"><div class="container"><div class="navbar navbar-inverse"><div class="navbar-inner"> <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="brand" href="../">The Eagle Nest</a><div class="nav-collapse collapse"><ul class="nav"><li><a href="../">Home</a></li><li><a href="?page=newspaper">Recent Newspaper</a></li><li class="active"><a href="#contact">Lunch Menu</a></li><li><a href="#">Games</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="#">Giveaways</a></li><li class="divider"></li><li class="nav-header">Archive</li><li><a href="#">Newspapers</a></li><li><a href="#">Lunch Menus</a></li><li><a href="#">Surveys</a></li><li><a href="#">Games</a></li></ul></li></ul></div></div></div></div></div><center><iframe width="90%" height="100%" style="border:none; padding-top: 5em; height:85vh" src="https://docs.google.com/gview?url=https://eaglenest.netlify.app/newspapers/April%20Menu.pdf&embedded=true"><br></center><br>';
+                  contentDiv.innerHTML = '<center><iframe width="90%" height="100%" style="border:none; padding-top: 5em; height:85vh" src="https://docs.google.com/gview?url=https://eaglenest.netlify.app/newspapers/April%20Menu.pdf&embedded=true"><br></center><br>';
                   break;
               case 'surveys':
                   contentDiv.innerHTML = '';
                   break;
               case 'surveyid1':
-                  contentDiv.innerHTML = '<div class="navbar-wrapper"><div class="container"><div class="navbar navbar-inverse"><div class="navbar-inner"> <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="brand" href="../">The Eagle Nest</a><div class="nav-collapse collapse"><ul class="nav"><li><a href="../">Home</a></li><li><a href="?page=newspaper">Recent Newspaper</a></li><li><a href="?page=lunch">Lunch Menu</a></li><li><a href="#">Games</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="#">Giveaways</a></li><li class="divider"></li><li class="nav-header">Archive</li><li><a href="#">Newspapers</a></li><li><a href="#">Lunch Menus</a></li><li><a href="#">Surveys</a></li><li><a href="#">Games</a></li></ul></li></ul></div></div></div></div></div><center><br><br><br><iframe width="90%" src="../frames/1.html" height="100%" style="height:85vh;border:none;"></iframe><br><br></center>';
+                  contentDiv.innerHTML = '<center><br><br><br><iframe width="90%" src="../frames/1.html" height="100%" style="height:85vh;border:none;"></iframe><br><br></center>';
                   break;
               case 'archive':
                   contentDiv.innerHTML = '';
                   break;
               case 'newspaper':
-                  contentDiv.innerHTML = ' <div class="navbar-wrapper"><div class="container"><div class="navbar navbar-inverse"><div class="navbar-inner"> <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="brand" href="../">The Eagle Nest</a><div class="nav-collapse collapse"><ul class="nav"><li><a href="../">Home</a></li><li class="active"><a href="#about">Recent Newspaper</a></li><li><a href="?page=lunch">Lunch Menu</a></li><li><a href="#">Games</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="#">Giveaways</a></li><li class="divider"></li><li class="nav-header">Archive</li><li><a href="#">Newspapers</a></li><li><a href="#">Lunch Menus</a></li><li><a href="#">Surveys</a></li><li><a href="#">Games</a></li></ul></li></ul></div></div></div></div></div><center><iframe width="90%" height="100%" style="border:none; padding-top: 5em; height:85vh" src="https://docs.google.com/gview?url=https://eaglenest.netlify.app/newspapers/October%20Newspaper.pdf&embedded=true"><br></center><br>';
+                  contentDiv.innerHTML = '<center><iframe width="90%" height="100%" style="border:none; padding-top: 5em; height:85vh" src="https://docs.google.com/gview?url=https://eaglenest.netlify.app/newspapers/October%20Newspaper.pdf&embedded=true"><br></center><br>';
                   break;
               // Add more pages as needed
               default:
-                  contentDiv.innerHTML = '<div class="navbar-wrapper"><div class="container"><div class="navbar navbar-inverse"><div class="navbar-inner"> <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="brand" href="../">The Eagle Nest</a><div class="nav-collapse collapse"><ul class="nav"><li><a href="../">Home</a></li><li><a href="?page=newspaper">Recent Newspaper</a></li><li><a href="?page=lunch">Lunch Menu</a></li><li><a href="#">Games</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Other <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="#">Giveaways</a></li><li class="divider"></li><li class="nav-header">Archive</li><li><a href="#">Newspapers</a></li><li><a href="#">Lunch Menus</a></li><li><a href="#">Surveys</a></li><li><a href="#">Games</a></li></ul></li></ul></div></div></div></div></div><br><br><h2>ERROR (page not defined). Oops!, Something happened, Please return to home and contact us.</h2>';
+                  contentDiv.innerHTML = '<br><br><h2>ERROR (page not defined). Oops!, Something happened, Please return to home and contact us.</h2>';
           }
       } else {
           // Default content if no 'page' parameter is provided
@@ -234,8 +237,10 @@ body {
 <script>
   // Get the current year
   var currentYear = new Date().getFullYear();
-
   document.getElementById('copyrightYear').innerText = currentYear;
+  $(document).ready(function() {
+    $("#navbar-container").load("./navbar.html");
+});
 </script>
 </body>
 </html>
