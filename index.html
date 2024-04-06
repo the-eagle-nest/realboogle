@@ -547,8 +547,14 @@ content:"low: "
       interval: 3500
     })
     $(document).ready(function() {
-    $("#navbar-container").load("./nav/navbar.html");
+    $("#navbar-container").load("https://eaglenest.netlify.app/nav/navbar.html", function() {
+        var url = window.location.href; 
+        $('.navbar-nav a').filter(function() {
+             return this.href == url;
+        }).parent().addClass('active').find('a').addClass('disabled');
+    });
 });
+
   </script>
    
 </body>
