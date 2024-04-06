@@ -23,8 +23,7 @@ color:#5a5a5a
 <body cz-shortcut-listen="true">
     <!-- NAVBAR -->
     <div id="navbar-container"></div>
-    <div class="container">
-        </div>
+    <div class="container"></div>
       <div class="container-fluid">
         <div class="row-fluid">
           <div class="span3">
@@ -63,16 +62,26 @@ color:#5a5a5a
             <!--/row-->
           </div><!--/span-->
         </div><!--/row-->
-  
         <hr>
-  
         <footer>
             <p class="pull-right"><a href="#">Back to top</a></p>
-            <p>© 2024 NameNotFound&#46;Net | Programmed by Ryan G</p>
+            <p>© <span id="copyrightYear"></span> NameNotFound&#46;Net | Programmed by Ryan G</p>
           </footer>
       </div>
   </div><!-- /.container -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    var currentYear = new Date().getFullYear();
+    document.getElementById('copyrightYear').innerText = currentYear;
+    $(document).ready(function() {
+      $("#navbar-container").load("./navbar.html", function() {
+          var url = window.location.href; 
+          $('.navbar-nav a').filter(function() {
+               return this.href == url;
+          }).parent().addClass('active').find('a').addClass('disabled');
+      });
+  });
+  </script>
 </body>
 </html>
