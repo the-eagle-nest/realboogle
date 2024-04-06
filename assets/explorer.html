@@ -75,7 +75,7 @@ color:#5a5a5a
     var currentYear = new Date().getFullYear();
     document.getElementById('copyrightYear').innerText = currentYear;
     $(document).ready(function() {
-      $("#navbar-container").load("./navbar.html", function() {
+      $("#navbar-container").load("https://eaglenest.netlify.app/navbar.html", function() {
           var url = window.location.href; 
           $('.navbar-nav a').filter(function() {
                return this.href == url;
