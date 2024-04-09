@@ -46,12 +46,12 @@ color:#5a5a5a
               <div class="span4">
                 <h2>Logo</h2>
                 <p>The main newspaper Logo</p>
-                <p><a class="btn btn-success" href="#">Download</a></p>
+                <button class="btn btn-success" onclick="downloadFile('img/logo.png')">Download</button>
               </div><!--/span-->
               <div class="span4">
                 <h2>QR Code</h2>
                 <p>This is the QR code that takes you to this website</p>
-                <p><a class="btn btn-success" href="#">Download</a></p>
+                <button class="btn btn-success" onclick="downloadFile('img/qr.png')">Download</button>
               </div><!--/span-->
               <div class="span4">
                 <h2>That's it</h2>
@@ -83,5 +83,22 @@ color:#5a5a5a
       });
   });
   </script>
+  <script>
+    function downloadFile(filePath) {
+        const link = document.createElement('a');
+        link.href = filePath;
+        link.download = getFileNameFromPath(filePath); // Extract filename from path
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    function getFileNameFromPath(filePath) {
+        // Extract the filename from the full path (e.g., 'https://example.com/file1.pdf')
+        const parts = filePath.split('/');
+        return parts[parts.length - 1];
+    }
+</script>
+
 </body>
 </html>
