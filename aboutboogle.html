@@ -5,9 +5,8 @@
     <title>The Eagle Nest</title>
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="./bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.5/css/weather-icons.min.css" rel="stylesheet">
-    <style>
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+     <style>
 body {
 padding-bottom:40px;
 color:#e2e2e2;
@@ -290,8 +289,26 @@ line-height:1.5
   <p> You are not actually welcome!</p>
   <br>
   <br>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/-_c9GvWISYM?si=xRF-VVlqPmD6H3R-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
-      <br>
+ <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="./assets/img/boogled.png"
+    data-setup="{}"
+  >
+    <source src="./assets/secon_about.mp4" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>    
+  <br>
       <br>
      </center>
     <div id="dvd"></div>
