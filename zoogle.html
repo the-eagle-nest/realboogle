@@ -222,28 +222,39 @@ line-height:1.5
 	font-style: normal;
 }
 
-#dvd {
-  position: absolute;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  width: 400px;
-  height: 176px;
-  color: #fff;
+.animal {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAgCAMAAADaHo1mAAAAgVBMVEX////b4v7F0f78/P/F0P5Wd/xlg/2ouf3u8v9gf/1kg/3d4/73+f+xwP9dff3O2P/6+/+muP1Yef3K1P+wwP9phv35+v/y9f+mt/2uvv+YrP79/f/4+f9efv3w8/+Lov38/f+5x/+/y/7T2/709v+hs/2gs/1mhP2Cm/1vi/yCmv3qKXQTAAAAv0lEQVR4Ae2WVRYCQRADg2QNd3fn/vfDHVam32u8fivjinfkTyye0KwdSNKyHX+/R+zdbQOkl/L3e6SeQDpjkdmcnz8i9LtAvkAWS/5+j8gfA2WyUvX3e0SeQA0A6mTDx4eW9/f7QLLZAtoWO93HPkr5G7jnGGCvDwzI4WMPhJcPCXAEjMmJtAGOwgJTADPOxQ1MwwILAEt64gYW+g3oT5H+IutvU/2Dpn9V6F92+te1/oOj/2TqP/r635Y/r2YNJVgTi8mBCMkAAAAASUVORK5CYII=) no-repeat #fff;
+  background-size: auto;
+  background-position: right -61px bottom;
+  float: left;
+  width: 32.33%;
+  text-align: center;
+  margin: 0.5%;
+  padding: 12px;
+  border-radius: 2px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.10);
+  cursor: pointer;
 }
 
-#dvd:before {
-  font-family: 'dvd' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\e900";
-  font-size: 175px;
+.img1 {
+  display: block;
+  width: 111px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 1280px) {
+  .animal {
+    width: 24%;
+    margin: 0.5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .animal {
+    width: 48%;
+    margin: 0.5%;
+  }
 }
       </style>
   </head>
@@ -285,16 +296,28 @@ line-height:1.5
     </div>
   </div><!-- /.carousel -->
   
-  <div class="container marketing">
-    <center>
-      <h1 style="font-size: 85px;"> Welcome to Zoogle!!! <br><span style="font-size: 20px;"> "Worlds Best ZOO search engine"</span></h1>
-  <p>You are not actually welcome!</p>
   <br>
   <br>
-  <div class="search-container">
-    <input type="text" id="searchInput" placeholder="Search the web..." style="height: 50px; font-size: 20px;">
-    <button class="btn btn-large btn-success" onclick="searchWeb()">Search NOW!!!</button>
-</div>
+  <div id="horse" class="animal"><img class="img1"/><audio></audio>Horse</div>
+<div id="bowhead-whale" class="animal"><img class="img1"/><audio></audio>Whale</div>
+<div id="duck" class="animal"><img class="img1"/><audio></audio>Duck</div>
+<div id="cow" class="animal"><img class="img1"/><audio></audio>Cow</div>
+<div id="cat" class="animal"><img class="img1"/><audio></audio>Cat</div>
+<div id="ape" class="animal"><img class="img1"/><audio></audio>Ape</div>
+<div id="pig" class="animal"><img class="img1"/><audio></audio>Pig</div>
+<div id="zebra" class="animal"><img class="img1"/><audio></audio>Zebra</div>
+<div id="turkey" class="animal"><img class="img1"/><audio></audio>Turkey</div>
+<div id="lion" class="animal"><img class="img1"/><audio></audio>Lion</div>
+<div id="dog" class="animal"><img class="img1"/><audio></audio>Dog</div>
+<div id="rooster" class="animal"><img class="img1"/><audio></audio>Rooster</div>
+<div id="turtle" class="animal"><img class="img1"/><audio></audio>Turtle</div>
+<div id="humpback-whale" class="animal"><img class="img1"/><audio></audio>Humpback Whale</div>
+<div id="tiger" class="animal"><img class="img1"/><audio></audio>Tiger</div>
+<div id="raccoon" class="animal"><img class="img1"/><audio></audio>Raccoon</div>
+<div id="moose" class="animal"><img class="img1"/><audio></audio>Moose</div>
+<div id="elephant" class="animal"><img class="img1"/><audio></audio>Elephant</div>
+<div id="sheep" class="animal"><img class="img1"/><audio></audio>Sheeep</div>
+<div id="owl" class="animal"><img class="img1"/><audio></audio>Owl</div>
   <br>
   <br>
   <script type="text/javascript" src="https://www.free-counters.org/count/fa0y"></script><br>
@@ -302,7 +325,6 @@ line-height:1.5
       <br>
       <br>
     </center>
-    <div id="dvd"></div>
     <!-- FOOTER -->
     <footer>
       <p class="pull-right"><a href="#">Back to top</a></p>
@@ -318,157 +340,21 @@ line-height:1.5
     window.location.href = googleSearch;
 } </script>
 <script>
-  var box = document.getElementById('dvd'),
-  colors = ['#ff0000', '#ff4000', '#ff8000', '#ffbf00', '#ffff00', '#bfff00', '#80ff00', '#40ff00', '#00ff00', '#00ff40', '#00ff80', '#00ffbf', '#00ffff', '#00bfff', '#0080ff', '#0040ff', '#0000ff', '#4000ff', '#8000ff', '#bf00ff', '#ff00ff', '#ff00bf', '#ff0080', '#ff0040', '#ff0000'],
-  currentColor = Math.floor((Math.random() * 25) + 1),
-  win = window,
-  ww = win.innerWidth,
-  wh = win.innerHeight,
-  translateX = Math.floor((Math.random() * ww) + 1),
-  translateY = Math.floor((Math.random() * wh) + 1),
-  boxWidth = box.offsetWidth,
-  boxHeight = box.offsetHeight,
-  boxTop = box.offsetTop,
-  boxLeft = box.offsetLeft,
-  xMin = -boxLeft,
-  yMin = -boxTop,
-  xMax = win.innerWidth - boxLeft - boxWidth,
-  yMax = win.innerHeight - boxTop - boxHeight,
-  request = null,
-  direction = 'se',
-  speed = 8,
-  timeout = null;
+  $(".animal").on("click", function() {
+  $(this).find('audio').trigger("play");
+  console.log('Playing');
+});
 
-init();
+baseUrl = "//google.com/logos/fnbx/animal_sounds/";
 
-// reset constraints on resize
-window.addEventListener('resize', function(argument) {
-  clearTimeout(timeout);
-  timeout = setTimeout(update, 100);
-}, false);
+$.each($(".animal img"), function(k, v) {
+  $(this).attr("src", baseUrl + $(v).closest("div").attr("id") + ".png");
+});
 
-function init() {
-  request = requestAnimationFrame(init);
-  move();
-  // setInterval(function() {
-  //   move();
-  // }, 16.66);
-}
-
-// reset constraints
-function update() {
-  xMin = -boxLeft;
-  yMin = -boxTop;
-  xMax = win.innerWidth - boxLeft - boxWidth;
-  yMax = win.innerHeight - boxTop - boxHeight;
-}
-
-function move() {
-  setDirection();
-  setStyle(box, {
-    transform: 'translate3d(' + translateX + 'px, ' + translateY + 'px, 0)',
-  });
-}
-
-function setDirection() {
-  switch (direction) {
-    case 'ne':
-      translateX += speed;
-      translateY -= speed;
-      break;
-    case 'nw':
-      translateX -= speed;
-      translateY -= speed;
-      break;
-    case 'se':
-      translateX += speed;
-      translateY += speed;
-      break;
-    case 'sw':
-      translateX -= speed;
-      translateY += speed;
-      break;
-  }
-  setLimits();
-}
-
-function setLimits() {
-  if (translateY <= yMin) {
-    if (direction == 'nw') {
-      direction = 'sw';
-    } else if (direction == 'ne') {
-      direction = 'se';
-    }
-    switchColor();
-  }
-  if (translateY >= yMax) {
-    if (direction == 'se') {
-      direction = 'ne';
-    } else if (direction == 'sw') {
-      direction = 'nw';
-    }
-    switchColor();
-  }
-  if (translateX <= xMin) {
-    if (direction == 'nw') {
-      direction = 'ne';
-    } else if (direction == 'sw') {
-      direction = 'se';
-    }
-    switchColor();
-  }
-  if (translateX >= xMax) {
-    if (direction == 'ne') {
-      direction = 'nw';
-    } else if (direction == 'se') {
-      direction = 'sw';
-    }
-    switchColor();
-  }
-}
-
-function switchColor() {
-  var color = Math.floor((Math.random() * 25) + 1);
-  
-  while( color == currentColor ) {
-    color = Math.floor((Math.random() * 25) + 1)
-  }
-  
-  setStyle(box, {
-    color: colors[color]
-  });
-  
-  currentColor = color;
-}
-
-function getVendor() {
-  var ua = navigator.userAgent.toLowerCase(),
-    match = /opera/.exec(ua) || /msie/.exec(ua) || /firefox/.exec(ua) || /(chrome|safari)/.exec(ua) || /trident/.exec(ua),
-    vendors = {
-      opera: '-o-',
-      chrome: '-webkit-',
-      safari: '-webkit-',
-      firefox: '-moz-',
-      trident: '-ms-',
-      msie: '-ms-',
-    };
-
-  return vendors[match[0]];
-};
-
-function setStyle(element, properties) {
-  var prefix = getVendor(),
-    property, css = '';
-  for (property in properties) {
-    css += property + ': ' + properties[property] + ';';
-    css += prefix + property + ': ' + properties[property] + ';';
-  }
-  element.style.cssText += css;
-}
+$.each($(".animal audio"), function(k, v) {
+  $(this).attr("src", baseUrl + $(v).closest("div").attr("id") + ".mp3");
+});
+   
 </script>
-<script>
-  
-</script>
-  
 </body>
 </html>
