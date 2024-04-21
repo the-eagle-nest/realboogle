@@ -2,11 +2,12 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Eagle Nest</title>
+    <title>Zooogle</title>
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="./bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
-     <style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.5/css/weather-icons.min.css" rel="stylesheet">
+    <style>
 body {
 padding-bottom:40px;
 color:#e2e2e2;
@@ -65,7 +66,7 @@ z-index:10
 }
 
 .carousel .item {
-height:200px
+height:500px
 }
 
 .carousel img {
@@ -73,7 +74,7 @@ position:absolute;
 top:0;
 left:0;
 min-width:100%;
-height:200px
+height:500px
 }
 
 .carousel-caption {
@@ -260,12 +261,12 @@ line-height:1.5
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">You got Boogled</a>
+            <a class="brand" href="#">You got Zoogled</a>
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li><a href="boogle.html">Home</a></li>
-                <li class="active"><a href="#">About Boogle</a></li>
-                <li><a href="zoogle.html">Go to Zoogle</a></li>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="aboutzoogle.html">About Zoogle</a></li>
+                <li><a href="boogle.html">Go to Boogle</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
@@ -276,7 +277,7 @@ line-height:1.5
   <div id="myCarousel" class="carousel slide">
     <div class="carousel-inner">
       <div class="item active">
-        <img src="./assets/img/boogled.png" alt="">
+        <img src="./assets/img/zoogled.png" alt="">
         <div class="container">
           
         </div>
@@ -286,67 +287,26 @@ line-height:1.5
   
   <div class="container marketing">
     <center>
-      <h1 style="font-size: 65px;"> Welcome to Boogle's About page!!! <br><span style="font-size: 20px;"> "Worlds Best search engine" Rated 10/10</span></h1>
-  <p> You are not actually welcome!</p>
+      <h1 style="font-size: 85px;"> Welcome to Zoogle!!! <br><span style="font-size: 20px;"> "Worlds Best ZOO search engine"</span></h1>
+  <p>You are not actually welcome!</p>
   <br>
   <br>
- <video
-    id="my-video"
-    class="video-js"
-    controls
-    preload="auto"
-    width="646"
-    height="364"
-    poster="./assets/img/boogled.png"
-    data-setup="{}"
-  >
-    <source src="https://eaglenest.netlify.app/assets/safe.mp4" type="video/mp4" />
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a
-      web browser that
-      <a href="https://videojs.com/html5-video-support/" target="_blank"
-        >supports HTML5 video</a
-      >
-    </p>
-  </video>    
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search the web..." style="height: 50px; font-size: 20px;">
+    <button class="btn btn-large btn-success" onclick="searchWeb()">Search NOW!!!</button>
+</div>
   <br>
   <br>
-  <video
-  id="my-video"
-  class="video-js"
-  controls
-  preload="auto"
-  width="646"
-  height="364"
-  poster="./assets/img/boogled.png"
-  data-setup="{}"
->
-  <source src="https://eaglenest.netlify.app/assets/secon_about.mp4" type="video/mp4" />
-  <p class="vjs-no-js">
-    To view this video please enable JavaScript, and consider upgrading to a
-    web browser that
-    <a href="https://videojs.com/html5-video-support/" target="_blank"
-      >supports HTML5 video</a
-    >
-  </p>
-</video>    
-  <br>
-  <br>
-  <a href="https://www.redbubble.com/i/t-shirt/Boogle-by-brasevko/128815020.IJ6L0" class="btn btn-large btn-info">Buy Our Merch NOW!!!</a>
-  <br>
-  <br>
-  <a href="https://www.youtube.com/@francis_gaming" class="btn btn-large btn-danger">Subscribe</a>
-  <br>
-  <br>
-  <a href="https://www.youtube.com/watch?v=SznwJD8Q0yg&autoplay=1" class="btn btn-large btn-danger">Free Things!!!1!11</a>
-  <br>
+  <script type="text/javascript" src="https://www.free-counters.org/count/fa0y"></script><br>
+  <a href='https://www.free-counters.org/'>https://www.Free-Counters.org</a> <script type='text/javascript' src='https://www.whomania.com/ctr?id=e76052e43cc42d612542fbb7810e7b2bc3d8a25d'></script>
       <br>
-     </center>
+      <br>
+    </center>
     <div id="dvd"></div>
     <!-- FOOTER -->
     <footer>
       <p class="pull-right"><a href="#">Back to top</a></p>
-      <p>This is fake</p>
+      <p>This is not a real homepage, this is a parody of google.com. This is a fake website</p>
     </footer>
 
   </div><!-- /.container -->
@@ -376,7 +336,7 @@ line-height:1.5
   yMax = win.innerHeight - boxTop - boxHeight,
   request = null,
   direction = 'se',
-  speed = 4,
+  speed = 8,
   timeout = null;
 
 init();
