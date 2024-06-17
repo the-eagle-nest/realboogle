@@ -724,8 +724,8 @@
 <div class=card>
 <div class=card-content>
 <div class=card-left>
-<img class=logo src=logo.svg alt=Logo>
-<h2 style=color:black>The Eagle Nest</h2>
+<img class=logo src=logo.png alt=Logo>
+<h2 style=color:black>Best Search Engine</h2>
 </div>
 <div class=card-right>
 <button class=button>
@@ -766,30 +766,5 @@
 </div>
 </footer>
 </body>
-<div data-netlify-identity-button>Login with Netlify Identity</div>
-  <script>// Open the modal
-    netlifyIdentity.open();
-    
-    // Get the current user:
-    // Available after on('init') is invoked
-    const user = netlifyIdentity.currentUser();
-    
-    // Bind to events
-    netlifyIdentity.on('init', user => console.log('init', user));
-    netlifyIdentity.on('login', user => console.log('login', user));
-    netlifyIdentity.on('logout', () => console.log('Logged out'));
-    netlifyIdentity.on('error', err => console.error('Error', err));
-    netlifyIdentity.on('open', () => console.log('Widget opened'));
-    netlifyIdentity.on('close', () => console.log('Widget closed'));
-    
-    // Unbind from events
-    netlifyIdentity.off('login'); // to unbind all registered handlers
-    netlifyIdentity.off('login', handler); // to unbind a single handler
-    netlifyIdentity.close();
-    netlifyIdentity.logout();
-    netlifyIdentity.refresh().then((jwt)=>console.log(jwt))
-    
-    // Change language
-    netlifyIdentity.setLocale('en');</script>
 <script>document.addEventListener("DOMContentLoaded",function(){document.body.style.display="block"});</script>
 </html>
