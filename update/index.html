@@ -738,6 +738,71 @@
 <span class=new-span style=font-size:36px;color:black;text-align:left;padding:15px;font-style:bold>New:</span>
 <br>
 <div class=content>
+  <style>
+    .btn-s {
+      font-family: inherit;
+      font-size: 20px;
+      background-image: linear-gradient(to bottom,#505bfb,#003054);
+      color: white;
+      padding: 0.7em 1em;
+      padding-left: 0.9em;
+      display: flex;
+      align-items: center;
+      border: none;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    
+    .btn-s span {
+      display: block;
+      margin-left: 0.3em;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .btn-s svg {
+      display: block;
+      transform-origin: center center;
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .btn-s:hover .svg-wrapper {
+      animation: fly-1 0.6s ease-in-out infinite alternate;
+    }
+    
+    .btn-s:hover svg {
+      transform: translateX(1.9em) rotate(10deg) scale(1.1);
+    }
+    
+    .btn-s:hover span {
+      transform: translateX(5em);
+    }
+    
+    .btn-s:active {
+      transform: scale(0.95);
+    }
+    
+    @keyframes fly-1 {
+      from {
+        transform: translateY(0.1em);
+      }
+    
+      to {
+        transform: translateY(-0.1em);
+      }
+    }
+    
+    </style>
+    <button class="btn-s" onclick="searchWeb()">
+      <div class="svg-wrapper-1">
+        <div class="svg-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+        </div>
+      </div>
+      <span>Search</span>
+    </button>
+    
 <div class="content narrow">
 <div class="columns two">
 <a href="./read">
@@ -762,5 +827,10 @@
 </div>
 </footer>
 </body>
+<script>function searchWeb() {
+  var query = document.getElementById("searchInput").value;
+  var googleSearch = "https://www.bing.com/search?q=" + encodeURIComponent(query);
+  window.location.href = googleSearch;
+} </script>
 <script>document.addEventListener("DOMContentLoaded",function(){document.body.style.display="block"});</script>
 </html>
