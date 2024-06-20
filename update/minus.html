@@ -265,10 +265,10 @@
   align-items:center;
   padding:10px 25px;
   gap:15px;
-  background: linear-gradient(0deg, rgba(5, 255, 0, 0.15), rgba(5, 255, 0, 0.15)), linear-gradient(180deg, #939393 0%, #49494B 52.19%, #2D2D2D 53.26%, #060606 100%);
+  background: linear-gradient(0deg, rgba(0, 9, 220, 0.36), rgba(0, 9, 220, 0.36)), linear-gradient(180deg, #939393 0%, #49494B 52.19%, #2D2D2D 53.26%, #060606 100%);
   box-shadow:inset 0 2px 2px .4px rgba(255,255,255,0.25),inset 2px 0 2px .2px rgba(0,0,0,0.25)
   }
-
+  
   .nav.desktop {
   display:flex;
   flex-direction:row;
@@ -689,37 +689,46 @@
 <link rel=stylesheet href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body style=display:none>
-<div class=navbar>
-<div class="nav mobile">
-<label id=menu_toggle_label for=menu_toggle> <div class=navlink><i class=material-icons style=font-size:32px>menu</i></div></label>
-<div class=vl></div>
-</div>
-<a href=#/><div class=orb></div></a>
-<div class="nav mobile">
-<h3>Zoogle</h3>
-</div>
-<div class="nav desktop">
-<div class=vl></div>
-<div class=navlink><i class=material-icons style=font-size:32px>hiking</i><a href=./index.html><h3>Back</h3></a></div>
-<div class=vl></div>
-</div>
-</div>
-<input id=menu_toggle type=checkbox>
-<div class=menu_mobile>
-<div class=hl></div>
-<div class=navlink><i class=material-icons style=font-size:32px>hiking</i><a href=./index.html><h3>Back</h3></a></div>
-<div class=hl></div>
-
-</div>
+    <div class=navbar>
+        <div class="nav mobile">
+        <label id=menu_toggle_label for=menu_toggle> <div class=navlink><i class=material-icons style=font-size:32px>menu</i></div></label>
+        <div class=vl></div>
+        </div>
+        <a href=#/><div class=orb></div></a>
+        <div class="nav mobile">
+        <h3>Minus</h3>
+        </div>
+        <div class="nav desktop">
+        <div class=vl></div>
+        <div class=navlink><i class=material-icons style=font-size:32px>hiking</i><a href=./index.html><h3>Back</h3></a></div>
+        <div class=vl></div>
+        </div>
+        </div>
+        <input id=menu_toggle type=checkbox>
+        <div class=menu_mobile>
+        <div class=hl></div>
+        <div class=navlink><i class=material-icons style=font-size:32px>hiking</i><a href=./index.html><h3>Back</h3></a></div>
+        <div class=hl></div>
+        
+        </div>
 <div class=content1>
 <div class=card>
 <div class=card-content>
-<img class=logo src=zoo.png alt=Logo>
+<div class=card-left>
+<img class=logo src=logo.png alt=Logo>
+</div>
+<div class=card-right>
+<button class=button>
+<img src=btn1.svg alt="Button Icon">
+</button>
+<button class=button>
+<img src=btn2.svg alt="Button Icon">
+</button>
+</div>
 </div>
 </div>
 </div>
 <br>
-<span class="new-span" style="font-size:36px;color:white;text-align:left;padding:15px;font-style:bold">Secret</span>
 <br>
 <div class=content>
   <style>
@@ -817,69 +826,52 @@
  height: 1rem;
 }
 
-.animal {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAgCAMAAADaHo1mAAAAgVBMVEX////b4v7F0f78/P/F0P5Wd/xlg/2ouf3u8v9gf/1kg/3d4/73+f+xwP9dff3O2P/6+/+muP1Yef3K1P+wwP9phv35+v/y9f+mt/2uvv+YrP79/f/4+f9efv3w8/+Lov38/f+5x/+/y/7T2/709v+hs/2gs/1mhP2Cm/1vi/yCmv3qKXQTAAAAv0lEQVR4Ae2WVRYCQRADg2QNd3fn/vfDHVam32u8fivjinfkTyye0KwdSNKyHX+/R+zdbQOkl/L3e6SeQDpjkdmcnz8i9LtAvkAWS/5+j8gfA2WyUvX3e0SeQA0A6mTDx4eW9/f7QLLZAtoWO93HPkr5G7jnGGCvDwzI4WMPhJcPCXAEjMmJtAGOwgJTADPOxQ1MwwILAEt64gYW+g3oT5H+IutvU/2Dpn9V6F92+te1/oOj/2TqP/r635Y/r2YNJVgTi8mBCMkAAAAASUVORK5CYII=) no-repeat #fff;
-  background-size: auto;
-  background-position: right -61px bottom;
-  float: left;
-  width: 32.33%;
-  text-align: center;
-  margin: 0.5%;
-  padding: 12px;
-  border-radius: 2px;
-  box-shadow: 0 2px 2px rgba(0,0,0,0.10);
-  cursor: pointer;
-}
 
-.img1 {
-  display: block;
-  width: 111px;
-  margin: 0 auto;
-  margin-bottom: 15px;
-}
-
-@media (min-width: 1280px) {
-  .animal {
-    width: 24%;
-    margin: 0.5%;
-  }
-}
-
-@media (max-width: 600px) {
-  .animal {
-    width: 48%;
-    margin: 0.5%;
-  }
-}
-.sounddiv {
-  color: black;
-  padding: 20px;
-}
     </style>
+   <div class="group">
+    <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+    <input id="searchInput" placeholder="Search" type="search" class="input">
+  </div>
+    <button class="btn-s" onclick="searchWeb()">
+      <div class="svg-wrapper-1">
+        <div class="svg-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+        </div>
+      </div>
+      <span>Search</span>
+    </button>
     
 <div class="content narrow">
-        <div class="sounddiv">
-          <div id="horse" class="animal"><img class="img1"/><audio></audio>Horse</div>
-          <div id="bowhead-whale" class="animal"><img class="img1"/><audio></audio>Whale</div>
-          <div id="duck" class="animal"><img class="img1"/><audio></audio>Duck</div>
-          <div id="cow" class="animal"><img class="img1"/><audio></audio>Cow</div>
-          <div id="cat" class="animal"><img class="img1"/><audio></audio>Cat</div>
-          <div id="ape" class="animal"><img class="img1"/><audio></audio>Ape</div>
-          <div id="pig" class="animal"><img class="img1"/><audio></audio>Pig</div>
-          <div id="zebra" class="animal"><img class="img1"/><audio></audio>Zebra</div>
-          <div id="turkey" class="animal"><img class="img1"/><audio></audio>Turkey</div>
-          <div id="lion" class="animal"><img class="img1"/><audio></audio>Lion</div>
-          <div id="dog" class="animal"><img class="img1"/><audio></audio>Dog</div>
-          <div id="rooster" class="animal"><img class="img1"/><audio></audio>Rooster</div>
-          <div id="turtle" class="animal"><img class="img1"/><audio></audio>Turtle</div>
-          <div id="humpback-whale" class="animal"><img class="img1"/><audio></audio>Humpback Whale</div>
-          <div id="tiger" class="animal"><img class="img1"/><audio></audio>Tiger</div>
-          <div id="raccoon" class="animal"><img class="img1"/><audio></audio>Raccoon</div>
-          <div id="moose" class="animal"><img class="img1"/><audio></audio>Moose</div>
-          <div id="elephant" class="animal"><img class="img1"/><audio></audio>Elephant</div>
-          <div id="sheep" class="animal"><img class="img1"/><audio></audio>Sheeep</div>
-          <div id="owl" class="animal"><img class="img1"/><audio></audio>Owl</div>
-        </div>
+<span class="new-span" style="font-size:36px;color:rgb(0, 0, 0);text-align:left;padding:15px;font-style:bold">Access the benefits of your Boogle Minus benefits</span>
+<div class="container-fluid">
+    <div class="thumbnail">
+      <img alt="300x200" style="width: 300px; height: 200px;" src="./assets/img/ball.png">
+      <div class="caption">
+        <h3>Boogle Ball</h3>
+        <p style="color: #fff;">Basketball Simulator 2024, be sure to check the help button for the controls</p>
+        <p><a href="https://boogled.netlify.app/boogleminus/ball" class="btn btn-primary">Play Now!</a></p>
+      </div>
+    </div>
+  </div>
+  <br>
+    <div class="thumbnail">
+      <img alt="300x200" style="width: 300px; height: 200px;" src="./assets/img/pop.png">
+      <div class="caption">
+        <h3>Boogle Pop</h3>
+        <p style="color: #fff;">Pop the <em>Dangerous</em> Ballons, and earn points. (Press the spacebar to shoot balls</p>
+        <p><a href="https://boogled.netlify.app/boogleminus/booglepop" class="btn btn-primary">Play Now!</a></p>
+      </div>
+    </div>
+    <div class="thumbnail">
+      <img alt="300x200" style="width: 300px; height: 200px;" src="./assets/img/angry.png">
+      <div class="caption">
+        <h3>Angry Boogle</h3>
+        <p style="color: #fff;">This game is not a copy of another game. This is an original Adobe Flash Game)</p>
+        <p><a href="https://boogled.netlify.app/boogleminus/angryboogle" class="btn btn-primary">Play Now!</a></p>
+      </div>
+    </div>
+  </div>
+  <br>
 </div>
 <footer class=footer>
 <div class=footer-content>
@@ -890,28 +882,10 @@
 </div>
 </footer>
 </body>
-<script>
-  $(".animal").on("click", function() {
-  $(this).find('audio').trigger("play");
-  console.log('Playing');
-});
-
-baseUrl = "//google.com/logos/fnbx/animal_sounds/";
-
-$.each($(".animal img"), function(k, v) {
-  $(this).attr("src", baseUrl + $(v).closest("div").attr("id") + ".png");
-});
-
-$.each($(".animal audio"), function(k, v) {
-  $(this).attr("src", baseUrl + $(v).closest("div").attr("id") + ".mp3");
-});
-   
-</script>
 <script>function searchWeb() {
   var query = document.getElementById("searchInput").value;
   var googleSearch = "https://www.bing.com/search?q=" + encodeURIComponent(query);
   window.location.href = googleSearch;
 } </script>
 <script>document.addEventListener("DOMContentLoaded",function(){document.body.style.display="block"});</script>
-
 </html>
