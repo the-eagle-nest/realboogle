@@ -12,17 +12,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     async function botReply(userMessage) {
         try {
-            const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+            const response = await fetch('https://api.groq.com/openai/v1/models', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': 'Bearer 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'
+                    'Authorization': 'Bearer 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'  // Replace with your actual API key
                 },
-                body: JSON.stringify({ message: userMessage })
+                body: JSON.stringify({ prompt: userMessage, max_tokens: 100 })  // Adjust the payload as needed
             });
 
             const data = await response.json();
-            return data.reply;  // Adjust this according to the actual API response structure
+            return data.choices[0].text.trim();  // Adjust this according to the actual API response structure
         } catch (error) {
             console.error('Error:', error);
             return "Sorry, I couldn't process your request.";
