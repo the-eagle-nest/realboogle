@@ -40,4 +40,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         }
     }
+
+    // Attach event listener
+    userInput.addEventListener('keypress', checkEnter);
 });
